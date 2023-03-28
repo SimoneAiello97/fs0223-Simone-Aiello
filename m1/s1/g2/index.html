@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-Frame-Options" content="deny"><meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in modo facile">
@@ -14,6 +15,53 @@
         border:1px solid #ddd;
         padding:8px; 
         }
+       header{
+        display: flex;
+        justify-content:baseline;
+        flex-direction: column;
+        background: linear-gradient(180deg,deeppink,white);
+       }
+       h2{
+        display: flex;
+        justify-content: center;
+        color: deeppink;
+       }
+       nav{
+        display: flex;  
+        justify-content: space-around;
+       }
+       main{
+        font-size: larger;
+       }
+       h1{
+        font-size: 5em;
+        display: flex;
+        justify-content: center; align-items: center;
+        margin-bottom: 0;        
+       }
+       h4{
+        margin-top: 0;
+        display: flex;
+        justify-content: center; align-items: center;
+
+       }
+       .yt{
+        display: flex;
+        justify-content: center; align-items: center
+       }
+       aside{
+        background: linear-gradient(270deg, #e0c2c2, transparent);
+        display: flex;
+        justify-content: center; align-items: center
+       }
+       
+       article{
+        display: flex; justify-content: space-around;
+       }
+       footer{
+        display: flex; justify-content: space-around; align-items: flex-end;
+        font-size: smaller; color: dimgrey;
+       }
    </style> 
 </head>
 <body>
@@ -22,7 +70,9 @@
     <h2>Epicode - Il blog dei developers</h2>
   </header>
   <nav>
-    home, articoli e job
+    <h3><a href="index.html" >Home</a></h3>
+    <h3> <a href="#article">Articoli</a></h3>
+    <h3><a href="#address">Job</a></h3>
   </nav>
   
   <main>
@@ -93,11 +143,13 @@
         </table>
     </section>
     <section>
-        Un test di validazione potrà essere fatto tramite il <a href="#">tool online</a> dedicato allo scopo.
-        Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri
-        developers come loro:
+       <p>
+            Un test di validazione potrà essere fatto tramite il <a href="#">tool online</a> dedicato allo scopo.
+            Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri
+            developers come loro:
+       </p> 
     </section>
-    <section>
+    <section class="yt">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/PMZFAxgjHI8" title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
          web-share" allowfullscreen></iframe>
@@ -107,23 +159,24 @@
     <p>
         Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:
     </p>
-    <form>
-        <input type="text" placeholder="Inserisci la tua email">
+    <form onsubmit="alert  ('Email inviata con successo')">
+        <input type="email" placeholder="Inserisci la tua email">
         <button type="submit">Invia!</button>
     </form>
   </aside>
-  <article> 
-        <h3>
-        Articoli correlati
-        </h3>
-        <p>
-        Validare il codice HTML, Categoria: develop, Data: 18-9-2020
+  
+  <article id="article">  
+        <h5>
+        Articoli correlati:
+        </h5> 
+        <p> <a href="#">Validare il codice HTML, Categoria: develop, Data: 18-9-2020</a>
+        
         </p>
-        <p>
-        Correggere la sintassi, Categoria: develop, Data: 16-9-2020
+        <p> <a href="#">Correggere la sintassi, Categoria: develop, Data: 16-9-2020</a>
+        
         </p>
-        <p>
-        Meno Kb nella pagina, Categoria: ottimizzazione, Data: 30-9-2020
+        <p> <a href="#">Meno Kb nella pagina, Categoria: ottimizzazione, Data: 30-9-2020</a>
+        
         </p>
   </article>
   <footer>
@@ -133,7 +186,7 @@
     <p>
         Testata online di Mario Rossi, registrata con prto. n.213/2018 - via Luigi Einaudi 2 - Milano. P.IVA 00112233. 
     </p>
-    <address>
+    <address id="address">
         <a href="mailto:info@epicode.school" target="_blank">info@epicode.school</a> 
     </address>
   </footer>
