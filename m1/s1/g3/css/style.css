@@ -1,0 +1,47 @@
+header{
+    text-align: center;
+}
+.logo{
+ border-bottom: 1.8px solid rgba(241, 211, 38, 0.801)
+}
+header p{
+    background-color:rgb(251, 240, 252);
+    margin: 0;
+    padding: 1em;
+}
+header img{
+    width: 200px;
+    padding: 12px;
+}
+main{
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-left: 0;
+    
+}
+h1{
+    text-align: center;
+}
+.foto{
+    font-size: small;
+    text-align: center;
+    color: darkgrey;
+}
+.feature{
+    border-left: 1px solid yellow;
+    padding: 1em;
+    display: flex;
+    flex-direction:column; color: brown;
+}
+.title{
+    border-bottom: 1.8px solid rgba(104, 232, 236, 0.801);
+    padding: 15px;
+    padding-left: 0;
+}
+.lista{
+    font-weight: 700;
+}
+ul li{
+    padding: 10px;
+}
+
