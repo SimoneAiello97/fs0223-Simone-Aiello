@@ -1,37 +1,60 @@
+body{
+    margin: 0;
+}
 header{
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
+    margin-left: 0;
 }
 .logo{
- border-bottom: 1.8px solid rgba(241, 211, 38, 0.801)
+ border-bottom: 1.8px solid rgba(241, 211, 38, 0.801);
 }
 header p{
     background-color:rgb(251, 240, 252);
-    margin: 0;
+    margin: 0 0;
     padding: 1em;
 }
 header img{
     width: 200px;
     padding: 12px;
+    
+}
+.container{
+    margin: 0 auto;
+    width: 50%;
 }
 main{
-    margin-left: 25%;
-    margin-right: 25%;
-    padding-left: 0;
     
+    padding-left: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+figure{
+    margin: 0;
+}
+
+figure img{
+    width: 100%;
+    border-radius: 10px; 
+    box-shadow: 10px 10px 5px #dedede;
 }
 h1{
     text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.2em;
+    font-weight: 700;
 }
-.foto{
+.descrizione-foto{
     font-size: small;
     text-align: center;
     color: darkgrey;
 }
 .feature{
     border-left: 1px solid yellow;
-    padding: 1em;
+    padding-left: 1em;
     display: flex;
-    flex-direction:column; color: brown;
+    flex-direction:column; color: rgb(224, 86, 31);
+    margin-bottom: 2.5em;
 }
 .title{
     border-bottom: 1.8px solid rgba(104, 232, 236, 0.801);
@@ -44,4 +67,8 @@ h1{
 ul li{
     padding: 10px;
 }
+a:link, a:visited {
+    text-decoration: underline;
+    color: #40dbf7;
+    background-color: transparent;}
 
