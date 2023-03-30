@@ -127,7 +127,23 @@ aside a{
     text-decoration: Underline 
 }
 .data{
-    text-align:right
+    text-align:right;
+    margin-bottom: 0.5rem;
+}
+aside{
+    padding-bottom: 1rem;
+}
+#footer{
+    background-image: radial-gradient(circle at 37.72% -19.64%, #8fd7ff 0, #6cc6f8 25%, #3cb5f2 50%, #00a4ec 75%, #0094e6 100%);
+    text-align: center;
+    margin: 1.5rem;
+    box-shadow: 2px 2px 5px #414040;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 0.1rem;
+}
+footer a{
+    color: purple;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
