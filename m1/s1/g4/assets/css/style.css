@@ -1,0 +1,141 @@
+
+body{
+    background-image: url(../img/sfondo.png);
+    background-attachment: scroll;
+    background-size: auto;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3rem;
+}
+
+
+.top-bar{
+    background-image: radial-gradient(circle at 37.72% -19.64%, #8fd7ff 0, #6cc6f8 25%, #3cb5f2 50%, #00a4ec 75%, #0094e6 100%);
+    text-align: center;
+    margin: 1.5rem;
+  
+        box-shadow: 2px 2px 5px #414040;
+     }
+
+.top-bar div,nav,a{
+    color:white;
+    text-decoration: none;
+}
+.topbar-list{
+   
+        list-style-type: none;
+     
+}
+       
+
+.content{
+    background-color: white;
+    margin: 1.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    box-shadow: 2px 2px 5px #414040;
+      }
+
+#title{
+    font-size:x-large;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+#subtitle{
+    font-size: smaller;
+    color:gray;
+    margin-bottom: 1rem;
+}
+h2{
+    margin-top: 1rem;
+}
+p{
+    margin-bottom: 1rem;
+}
+ul,ol{
+    padding-left: 2.5rem ;
+    margin-bottom: 1rem;
+}
+code{
+    background-color: #b3b3b3;
+    border:0.8px solid #5e5e5e;
+    border-radius: calc(15%);
+}
+p strong{
+    color:purple;
+}
+table{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+} 
+
+caption{
+    font-weight: bold;
+}
+tr:nth-child(even){
+    background-color:rgb(209, 209, 209);
+    border-bottom:0.8px solid dimgray;
+    border-top:0.8px solid dimgray;
+    
+}
+th{
+    background-color: rgb(75, 183, 255);
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    padding: 1rem;
+}
+tbody:last-child{
+    border-bottom: 1px solid #0094e6;
+}
+#linktool{
+    color: blue;
+    text-decoration: Underline ; 
+}
+#video{
+    width: 100%;
+    border-radius: calc(10%);
+}
+.news{
+    background-color: rgb(199, 197, 197);
+       padding: 1rem; 
+       padding-top: 0.2rem;
+}
+.news h2{
+    text-align: center;
+    font-size: x-large;
+    text-transform:uppercase;
+    padding-bottom: 1.5rem;
+
+}
+aside h2{
+    text-align: center;
+    font-size: x-large;
+    text-transform:uppercase;
+    padding-bottom: 1rem;
+    padding-top:1rem ;
+}
+.article{
+    background-color: rgb(199, 197, 197);
+    padding: 1rem; 
+    padding-top: 0.2rem;
+    margin: 1rem
+}
+aside a{
+    color: blue;
+    text-decoration: Underline 
+}
+.data{
+    text-align:right
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
