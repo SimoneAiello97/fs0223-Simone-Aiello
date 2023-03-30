@@ -9,14 +9,15 @@ body{
 
 
 .top-bar{
-    background-image: radial-gradient(circle at 37.72% -19.64%, #8fd7ff 0, #6cc6f8 25%, #3cb5f2 50%, #00a4ec 75%, #0094e6 100%);
+    background-image: radial-gradient(circle at 37.72% -19.64%, #0088aa 0, #0088aa 25%, #026888 50%, #026888 75%, #006f88 100%);
     text-align: center;
     margin: 1.5rem;
-  
-        box-shadow: 2px 2px 5px #414040;
-     }
+    padding: 1rem;
+    box-shadow: 2px 2px 5px #414040;
+    text-transform:uppercase;
+    }
 
-.top-bar div,nav,a{
+.top-bar div, nav, a{
     color:white;
     text-decoration: none;
 }
@@ -52,14 +53,16 @@ h2{
 p{
     margin-bottom: 1rem;
 }
-ul,ol{
+ul, ol{
     padding-left: 2.5rem ;
     margin-bottom: 1rem;
 }
 code{
-    background-color: #b3b3b3;
-    border:0.8px solid #5e5e5e;
+    background-color: #dfe5e6;
+    border:0.8px solid #aaa9a9;
     border-radius: calc(15%);
+    padding: 0.8px;
+    line-height: 1.7rem;
 }
 p strong{
     color:purple;
@@ -68,26 +71,28 @@ table{
     text-align: center;
     margin: 0 auto;
     width: 100%;
+    margin-bottom: 1rm;
 } 
 
 caption{
     font-weight: bold;
 }
 tr:nth-child(even){
-    background-color:rgb(209, 209, 209);
+    background-color:#efefef;
     border-bottom:0.8px solid dimgray;
     border-top:0.8px solid dimgray;
     
 }
 th{
-    background-color: rgb(75, 183, 255);
+    background-color: #346bc1;
     color: white;
     border: 1px solid white;
     text-align: center;
     padding: 1rem;
 }
 tbody:last-child{
-    border-bottom: 1px solid #0094e6;
+    border-bottom: 1px solid #3366cc;
+    
 }
 #linktool{
     color: blue;
@@ -98,9 +103,10 @@ tbody:last-child{
     border-radius: calc(10%);
 }
 .news{
-    background-color: rgb(199, 197, 197);
+    background-color: #dfe5e6;
        padding: 1rem; 
        padding-top: 0.2rem;
+       box-shadow: 2px 2px 5px #414040;
 }
 .news h2{
     text-align: center;
@@ -117,15 +123,36 @@ aside h2{
     padding-top:1rem ;
 }
 .article{
-    background-color: rgb(199, 197, 197);
+    background-color: #dfe5e6;
     padding: 1rem; 
     padding-top: 0.2rem;
-    margin: 1rem
+    margin: 1rem;
+    box-shadow: 2px 2px 5px #414040;
 }
 aside a{
     color: blue;
-    text-decoration: Underline 
+    text-decoration: Underline ;
+    font-weight: bold;
+    
 }
+#pulsante {
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: bold 12px Arial, Helvetica, sans-serif;
+    color: #fff;
+    
+    border: solid 1px #89a0d7;
+    background:#3366cc;
+    font-size: large;
+    }
+  #user_email{
+    font-size: large;
+    border: none;
+    border-bottom: dotted;
+   
+  }
 .data{
     text-align:right;
     margin-bottom: 0.5rem;
@@ -134,7 +161,7 @@ aside{
     padding-bottom: 1rem;
 }
 #footer{
-    background-image: radial-gradient(circle at 37.72% -19.64%, #8fd7ff 0, #6cc6f8 25%, #3cb5f2 50%, #00a4ec 75%, #0094e6 100%);
+    background-image: radial-gradient(circle at 37.72% -19.64%, #005566 0, #005566 25%, #005566 50%, #374237 75%, #374237 100%);
     text-align: center;
     margin: 1.5rem;
     box-shadow: 2px 2px 5px #414040;
@@ -143,7 +170,7 @@ aside{
     margin-bottom: 0.1rem;
 }
 footer a{
-    color: purple;
+    color: #ff00fe;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
