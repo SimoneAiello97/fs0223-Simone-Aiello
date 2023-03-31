@@ -14,9 +14,10 @@ body{
 }
 .principal-section{
     background-image: url(../images/banner.jpg);
-    background-size: 100% 200%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: scroll; 
+    background-attachment: scroll;
+    background-position:center center; 
     text-align: center;
     padding: 100px;
     margin-bottom: 2rem 5rem;
