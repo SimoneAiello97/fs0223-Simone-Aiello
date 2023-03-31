@@ -14,7 +14,7 @@ body{
 }
 .principal-section{
     background-image: url(../images/banner.jpg);
-    background-size: cover;
+    background-size: 100% 200%;
     background-repeat: no-repeat;
     background-attachment: scroll; 
     text-align: center;
@@ -66,13 +66,12 @@ margin-left: 10rem;
     text-align: left;
     padding: 2rem;
     
-   
 }
 #testimonials{
     margin: 4rem 0;
     background-color: #e22d0e;
     text-align: center;
-    padding: 2rem;
+    padding: 5rem;
     color: white;
 }
 #testimonials h3{
@@ -80,7 +79,7 @@ margin-left: 10rem;
     font-size:xx-large ;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    padding:1.5rem;
+    padding:0 1.5rem;
     padding-bottom: 0.8rem;
 }
 #citation{
@@ -101,7 +100,8 @@ margin-left: 10rem;
     text-align: center;
     height: auto;
     display: inline-block;
-    margin: 0 auto;
+    margin: 0 1rem;
+    padding-bottom: 2rem;
 }
 .article img{
     width: 100%;
@@ -118,25 +118,31 @@ margin-left: 10rem;
 #footer{
     background-color: #25a2c3;
     color: white;
-    text-align: center;
-    padding: 2rem ;
+    
+    padding: 2rem 40% ;
     margin-top: 4rem;
 }
 #footer a{
     color: #c8e7f0 ;
 }
+#footer p{
+    text-align: left;
+}
 #footer h3{
     font-size: xx-large;
     margin-bottom: 1.5rem;
-
+    padding-left: 2px;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 #footer hr{
-    margin: 2rem 5rem;    
+    margin: 2rem 0;    
 }
 #map{
     text-decoration: none;
 }
-#copyright{
-    color:#c8e7f0  ;
+#footer #copyright{
+    color:#c8e7f0;
+    font-size: x-small;
+    text-align: center;
 }
