@@ -20,6 +20,7 @@ body{
     background-attachment: scroll; 
     text-align: center;
     padding: 2rem;
+    margin-bottom: 2rem;
    }
 .headings{
     color: #25a2c3;
@@ -40,6 +41,7 @@ body{
 }
 .content{
     text-align: center;
+    padding: 1rem;
 }
 .notebook-img{
     text-align: center;    
@@ -49,7 +51,7 @@ body{
     max-height: 30vh;
 }
 #testimonials{
-    margin: 3rem 0;
+    margin: 4rem 0;
     background-color: #e22d0e;
     text-align: center;
     padding: 2rem;
@@ -60,7 +62,7 @@ body{
     font-size:xx-large ;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    padding: 1.5rem;
+    padding:1.5rem;
     padding-bottom: 0.8rem;
 }
 #citation{
@@ -76,7 +78,7 @@ body{
 }
 .article{
     border: 1px solid #dee1e3;
-    margin:0 1rem;
+    margin:0 2rem;
     padding-bottom: 2.2rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -91,7 +93,8 @@ body{
     background-color: #25a2c3;
     color: white;
     text-align: center;
-    padding: 3rem ;
+    padding: 2rem ;
+    margin-top: 4rem;
 }
 #footer a{
     color: #c8e7f0 ;
@@ -103,7 +106,7 @@ body{
     font-weight: bold;
 }
 #footer hr{
-    margin: 2rem 4rem;
+    margin: 2rem 5rem;    
 }
 #map{
     text-decoration: none;
