@@ -1,0 +1,142 @@
+body{
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+.topbar{
+    background-color: black;
+    padding: 1rem;
+    margin: 0;
+}
+.topbar img{
+    width: 100px;
+}
+.principal-section{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    text-align: center;
+    padding: 100px;
+    margin-bottom: 2rem 5rem;
+    
+   }
+.headings{
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    
+}
+#pulsante{
+    background-color: #f04c2f ;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold;
+    border: none;
+    border-radius: 8%;
+    color: white ;
+    padding: 0.8em 1rem ;
+    margin-top: 1.5rem;
+}
+#sec2{
+    display: block;
+    margin: 10rem auto;
+}
+.content{
+    padding: 1rem;
+    text-align: left;
+}
+.notebook-img{
+    float: left;
+text-align: center;
+display: inline-block;
+padding: 20px;
+clear: both; 
+height: 100%;
+margin-left: 10rem;
+    
+}
+.notebook-img img{
+    border-radius: calc(100%);
+    
+}
+.text{
+    display: inline-block;
+    text-align: left;
+    padding: 2rem;
+    
+   
+}
+#testimonials{
+    margin: 4rem 0;
+    background-color: #e22d0e;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+}
+#testimonials h3{
+    margin-bottom: 1rem;
+    font-size:xx-large ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding:1.5rem;
+    padding-bottom: 0.8rem;
+}
+#citation{
+    font-style: italic;
+    font-weight: lighter;
+    padding-bottom: 0.8rem;
+}
+#nome-testimonial{
+    font-size: larger;
+}
+#rule-testimonial{
+    font-size: small;
+}
+
+.article{
+    border: 1px solid #dee1e3;
+    width: 28%;
+    text-align: center;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+.article img{
+    width: 100%;
+    height: 300px;
+}
+.article p{
+    padding:0 1rem;
+}
+#sec3{
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem;
+}
+#footer{
+    background-color: #25a2c3;
+    color: white;
+    text-align: center;
+    padding: 2rem ;
+    margin-top: 4rem;
+}
+#footer a{
+    color: #c8e7f0 ;
+}
+#footer h3{
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+
+    font-weight: bold;
+}
+#footer hr{
+    margin: 2rem 5rem;    
+}
+#map{
+    text-decoration: none;
+}
+#copyright{
+    color:#c8e7f0  ;
+}
