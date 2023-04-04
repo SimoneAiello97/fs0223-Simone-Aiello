@@ -23,6 +23,12 @@ REGOLE
 
 - Object: è un insieme di proprietà e valori annidati all'interno di un blocco {}. Tutte le coppie proprietà/valore di un oggetto vanno separate da una virgola e possono essere di vari datatypes. Gli oggetti possono contenere anche delle funzioni: le funzioni contenute all'interno di un oggetto si chiamano metodi.
 
+Poi questi datatypes possono essere:
+
+- Undefined: è una proprietà che indica che ad  una variabile non è stato assegnato un valore oppure che essa non è stata definita.
+
+- Null: il valore null indica l'assenza intenzionale di un oggetto. Indica una mancanza di identificazione.
+
 */
 
 /* ESERCIZIO 2
