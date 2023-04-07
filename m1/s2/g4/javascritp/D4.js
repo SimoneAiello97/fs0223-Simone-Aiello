@@ -196,19 +196,26 @@ Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: Jump
 Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
+
+
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
 
-/* EXTRA ESERCIZIO 9
+for (let x = 0; x < starWarsCharacters.length; x++){
+  if(starWarsCharacters[x].gender === "n/a"){starWarsCharacters[x].gender = "robot"}
+}
+console.log(starWarsCharacters);
 
-Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome"
+/*Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome"
 Usa uno più for loop per raggiungere il risultato
 
-(tip: cerca un metodo degli array per rimuovere un elemento)
+
 
 Una volta fatto crea un conosle.log per controllare la proprietà length di "characters" prima e dopo l'operazione
 */
+
+  
 
 /* EXTRA ESERCIZIO 10
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
