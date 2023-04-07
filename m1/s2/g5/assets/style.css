@@ -1,0 +1,151 @@
+body{
+    background-color: #e9edee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logo{
+  background-color: #222f3f;
+  padding: 0.2rem;
+  padding-left: 1.5rem;
+}
+.logo img {
+    width: 100px;
+}
+.top-buttons{
+    background-color: #364759;
+    padding: 0.2rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.2rem;
+    
+}
+.button{
+    background-color: #364759;
+    text-align: center;
+    color: white;
+    border: hidden;
+    
+    
+}
+.button:hover{
+    border: 0.1px solid white;
+}
+.nav{
+    
+    text-align: center;
+    background-color: #f66502;
+    color: white;
+    padding: 0.5rem;
+}
+.main{
+    margin: 2rem;
+}
+.sec1{
+    margin-top: 2rem;
+    background-image: url(bg-image.png);
+    background-size: 90%;
+    background-repeat: repeat;
+    background-attachment: scroll; 
+    text-align: center;
+    color: white;
+    padding: 2.5rem;
+    height: 30%;
+}
+.sec1 h1{
+    padding:1rem ;
+    font-size: xx-large;
+}
+.section{
+    padding: 0 auto;
+    margin: 2rem 0;
+    background-color: white;
+    
+}
+.section h3{
+    padding: 1rem;
+    padding-bottom: 0;
+}
+.section a {
+    color: #165c64;
+    text-decoration: none;
+    margin-left:1.5rem ;
+    font-size: smaller;
+    font-weight: bold;
+}
+.img-div{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    padding-bottom: 2rem;
+    
+}
+.img-sec1 {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #dedede;
+}
+#img1 {
+    background-image: url(img_1.jpg);
+}
+
+#img2 {
+    background-image: url(img_2.jpg);
+}
+
+#img3 {
+    background-image: url(img_3.jpg);
+}
+
+#img4 {
+    background-image: url(img_4.jpg);
+}
+#img-back1 {
+    background-image: url(img_9.png);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    
+}
+#img-back2{
+    background-image: url(img_10.png);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+}
+.console{
+    text-align: center;
+    background-color: none;
+    margin-top: 0.2rem;
+}
+.console a{
+    color: #165c64;
+    text-decoration: none;
+    margin-left:1.5rem ;
+    font-size: smaller;
+    font-weight: bold;
+}
+.section2{
+    margin-bottom: 2rem;
+}
+footer{
+    background-color: #364759;
+    text-align: center;
+    
+}
+#footer{
+    padding: 1rem;
+}
+footer a{
+    color: azure;
+    
+}
+.footer2{
+    background-color: #222f3f;
+    padding: 3rem 0;
+}
+footer img{
+    width: 150px;
+}
