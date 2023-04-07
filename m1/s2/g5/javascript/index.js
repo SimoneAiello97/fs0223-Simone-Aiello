@@ -132,7 +132,7 @@ while (i < numericArray.length && numericArray[i] != 32) {
 */
 const charactersArray = ["g", "n", "u", "z", "d"]
 
-let posizioneAlfabeto = []
+let y = []
 
 for (x = 0; x < charactersArray.length; x++){
     
@@ -140,165 +140,165 @@ for (x = 0; x < charactersArray.length; x++){
     {
     case "a":
 
-      posizioneAlfabeto.push(1);
+      y.push(1);
 
       break;
 
     case "b":
 
-      posizioneAlfabeto.push(2);
+      y.push(2);
 
       break;
 
     case "c":
 
-      posizioneAlfabeto.push(3);
+      y.push(3);
 
       break;
 
     case "d":
 
-      posizioneAlfabeto.push(4);
+      y.push(4);
 
       break;
 
     case "e":
 
-      posizioneAlfabeto.push(5);
+      y.push(5);
 
       break;
 
     case "f":
 
-      posizioneAlfabeto.push(6);
+      y.push(6);
 
       break;
 
     case "g":
 
-      posizioneAlfabeto.push(7);
+      y.push(7);
 
       break;
 
     case "h":
 
-      posizioneAlfabeto.push(8);
+      y.push(8);
 
       break;
 
     case "i":
 
-      posizioneAlfabeto.push(9);
+      y.push(9);
 
       break;
 
     case "j":
 
-      posizioneAlfabeto.push(10);
+      y.push(10);
 
       break;
 
     case "k":
 
-      posizioneAlfabeto.push(11);
+      y.push(11);
 
       break;
 
     case "l":
 
-      posizioneAlfabeto.push(12);
+      y.push(12);
 
       break;
 
     case "m":
 
-      posizioneAlfabeto.push(13);
+      y.push(13);
 
       break;
 
     case "n":
 
-      posizioneAlfabeto.push(14);
+      y.push(14);
 
       break;
 
     case "o":
 
-      posizioneAlfabeto.push(15);
+      y.push(15);
 
       break;
 
     case "p":
 
-      posizioneAlfabeto.push(16);
+      y.push(16);
 
       break;
 
     case "q":
 
-      posizioneAlfabeto.push(17);
+      y.push(17);
 
       break;
 
     case "r":
 
-      posizioneAlfabeto.push(18);
+      y.push(18);
 
       break;
 
     case "s":
 
-      posizioneAlfabeto.push(19);
+      y.push(19);
 
       break;
 
     case "t":
 
-      posizioneAlfabeto.push(20);
+      y.push(20);
 
       break;
 
     case "u":
 
-      posizioneAlfabeto.push(21);
+      y.push(21);
 
       break;
 
     case "v":
 
-      posizioneAlfabeto.push(22);
+      y.push(22);
 
       break;
 
     case "w":
 
-      posizioneAlfabeto.push(23);
+      y.push(23);
 
       break;
 
     case "x":
 
-      posizioneAlfabeto.push(24);
+      y.push(24);
 
       break;
 
     case "y":
 
-      posizioneAlfabeto.push(25);
+      y.push(25);
 
       break;
 
     case "z":
 
-      posizioneAlfabeto.push(26);
+      y.push(26);
 
       break;
 
     default:
 
-      posizioneAlfabeto.push(0);
+      y.push(0);
   }
 
 }
-console.log(posizioneAlfabeto);
+console.log(y);
 
