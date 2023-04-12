@@ -212,6 +212,7 @@ let film =[]
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+//così soltanto i nomi
 let film2 =[]
     for(i=0;i<movies.length;i++){
       if(movies[i].Year >= 2000){
@@ -220,11 +221,31 @@ let film2 =[]
   }
       console.log(film2);
 
+let filmNuovo = [];
+movies.map(function (p) {
+  if (p.Year >= '2000') {
+    filmNuovo.push(p);
+  }
+}
+)
+console.log(filmNuovo);
+
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+function getFilmById(imdbID) {
+  const film = movies.find((film) => film.imdbID === imdbID);
+  return film;
+}
 
-
+console.log(getFilmById("tt0077869"));
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+
+function yearSum(){
+  return movies.reduce(function(a, b) {
+    return a + Number(b.Year);
+},0)
+}
+console.log(yearSum())
