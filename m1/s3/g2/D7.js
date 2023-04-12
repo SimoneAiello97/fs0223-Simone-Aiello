@@ -196,24 +196,34 @@ let oldFilm = movies.reduce(function(a, b) {
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
-let film =[]
-function addFilm(){    
-for(i=0;i<movies.length;i++);
-      let a = movies[i].Title;
-      return film.push(a);
-  }
-  console.log(addFilm())
+function numeroFilm(){
+  return movies.length;
+}
+console.log(numeroFilm());
 /* ESERCIZIO 12
-  Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
+Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+let film =[]
+    for(i=0;i<movies.length;i++)
+      film.push(movies[i].Title);
+      console.log(film);
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+let film2 =[]
+    for(i=0;i<movies.length;i++){
+      if(movies[i].Year >= 2000){
+      film2.push(movies[i].Title)
+    }
+  }
+      console.log(film2);
+
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
