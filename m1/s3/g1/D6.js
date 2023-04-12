@@ -124,7 +124,6 @@ function upperFirst(str){
 
 function cutString(str){
     let a = (str.length)
-    
     return str.slice(1,a-1)
 }
 console.log(cutString('supercalifragili'))
