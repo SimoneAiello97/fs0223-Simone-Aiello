@@ -21,6 +21,7 @@ console.log(sum);
 */
 
 let random = Math.floor(Math.random() * 21);
+console.log(random);
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
@@ -66,7 +67,7 @@ console.log(me);
 */
 
 function dice(){
-    return Math.floor(Math.random() * 6)+ 1;
+    return Math.floor(Math.random() * 6 + 1);
   }
   console.log(dice());
 
@@ -74,8 +75,8 @@ function dice(){
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-let whoIsBigger = (a, b) => a > b ? a : b;
-console.log(whoIsBigger(10, 9));
+let whoIsBigger = (a, b) => {return a > b ? a : b};
+console.log(whoIsBigger(8, 9));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -97,7 +98,7 @@ function deleteOne(str, bool){
   if(bool){
     return str.slice(1);
   } else {
-    return str.slice(0,-2);
+    return str.slice(0,-1);
   }
 }
 console.log(deleteOne("I love coding", false));
@@ -119,11 +120,11 @@ console.log(onlyLetters('I have 4 dogs'));
 */
 
 function isThisAnEmail(str){
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str))
-    return true
- 
+  let regexp = /^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/;
+  let validMail = regexp.test(str);
+  return validMail;
 }
-console.log(isThisAnEmail("ciao@gmail.com"));
+console.log(isThisAnEmail('ciao@gmail.com'));
 
 
 /* ESERCIZIO 7
@@ -161,50 +162,51 @@ Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
 */
 
 function rollTheDices(num){
-  let oggetto = {
-    sum: 0,
-    values: []
+  //inizialmente avevo creato un oggetto ma successivamente ho usato un costruttore
+  function Oggetto(){           
+    this.sum = null;
+    this.values = []
   };
+  let oggetto = new Oggetto();
   for (let i= 0; i < num; i++){
     let dadi = dice();
     oggetto.values.push(dadi)
   }
-oggetto.sum = oggetto.values.reduce((a, b) => a + b) // o sum += dadi all'interno del ciclo for loop
+oggetto.sum = oggetto.values.reduce((a, b) => a + b) 
+// o sum += dadi all'interno del ciclo for loop
 return oggetto
 }
-console.log(rollTheDices(4));
+console.log(rollTheDices(3));
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
 function howManyDays(date){
-  let now = new Date();
-  let diff = now.getTime() - new Date(date).getTime();
+  let diff = new Date().getTime() - new Date(date).getTime();
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
   return days;
 }
-let days = howManyDays('1997-12-27'); // la mia data di nascita
-console.log(days);
+console.log(howManyDays('1997-12-27'));// la mia data di nascita
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
   */
- let now = new Date();
- let monthDay = now.getMonth() + 1
- let data = now.getDate();
- 
- let isTodayMyBirthday = (giorno,mese) => (data === giorno && monthDay === mese) ? true : false
- console.log(isTodayMyBirthday(27,12));
- 
- // Arrays & Oggetti
- 
- // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
- 
- /* ESERCIZIO 11
- Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
- in esso la proprietà chiamata come la stringa passata come secondo parametro.
- */
+let now = new Date();
+let monthDay = now.getMonth() + 1
+let data = now.getDate();
+
+let isTodayMyBirthday = (giorno,mese) => {return (data === giorno && monthDay === mese) ? true : false}
+console.log(isTodayMyBirthday(27,12));
+
+// Arrays & Oggetti
+
+// NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
+
+  /* ESERCIZIO 11
+  Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
+  in esso la proprietà chiamata come la stringa passata come secondo parametro.
+  */
 
 function deleteProp(obj, stringa){ 
   delete obj[stringa]
@@ -332,13 +334,13 @@ const movies = [
   },
 ]
 
-let newestMovie = movies.reduce(function(a, b) {
-  if(a.Year > b.Year){return a}else{return b}})
-  console.log(newestMovie);
+function newestMovie(){return movies.reduce((a, b) =>(a.Year > b.Year)? a : b)}
+  console.log(newestMovie());
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
+
 function countMovies(){
   return movies.length;
 }
@@ -350,7 +352,7 @@ console.log(countMovies());
 function onlyTheYears(){
 let anni =[]
     for(i=0;i<movies.length;i++)
-      anni.push(movies[i].Year);
+      {anni.push(movies[i].Year)};
       return anni
 }
 console.log(onlyTheYears());
@@ -359,13 +361,13 @@ console.log(onlyTheYears());
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 function onlyInLastMillennium(){
-  let filmVecchio = [];
+  let filmVecchi = [];
 movies.map(function (p) {
   if (p.Year < '2000') {
-    filmVecchio.push(p);
+    filmVecchi.push(p);
   }
 })
-return filmVecchio;
+return filmVecchi;
 }
 console.log(onlyInLastMillennium());
 
@@ -401,9 +403,11 @@ console.log(searchByTitle('the'));
 */
 
 function searchAndDivide(title){
-  let oggetto = {  }
-  oggetto.match = []
-  oggetto.unmatch = []
+  function Oggetto() {  
+  this.match = []
+  this.unmatch = []
+  }
+  let oggetto = new Oggetto();
   movies.forEach((movie) => {
     if (movie.Title.includes(title)) {
       oggetto.match.push(movie.Title)
@@ -423,10 +427,11 @@ function removeIndex(num){
   movies.splice(num, 1);
   return movies
 }
-console.log(removeIndex(0));
+console.log(removeIndex(4));
 
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
+// le funzioni sono state create, ma non attivate... ho fatto un check creando l'elemento nell'HTML e invocando la funzione
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
@@ -444,7 +449,7 @@ function elementContainer(){
 function elementTD(){
   let td = document.querySelectorAll('td');
   }
-
+  
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
@@ -452,11 +457,10 @@ function elementTD(){
 function scrivereSuTD(){
   let allTd = document.querySelectorAll('td')
   for(let i of allTd ){
-    let allTD = allTd[i].textContent;
+    let allTD = i.textContent;
     console.log(allTD);
   }
 }
-console.log(scrivereSuTD());
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -477,29 +481,35 @@ function addElementToList(){
   let myList = document.querySelector('#myList');
   let newElement = document.createElement('li');
   newElement.textContent = 'New element';
-  myList.append(newElement);
+  myList.appendChild(newElement);
 }
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-function removeElementFromList(){
-  let myList = document.querySelector('#myList');
-  let newElement = document.querySelectorAll('li');
-  for(let i of newElement){
-   
-   console.dir(newElement[i]);
-  }
-  
+//così elimino i <li> senza <ul>
+function removeLi() {
+  let ul = document.getElementById('myList')
+  let allLi = ul.querySelectorAll('li');
+  allLi.forEach(li => li.remove());
 }
 
+//così svuoto l'intero <ul>
+function removeElementFromList(){
+    document.querySelector('#myList').remove() 
+}
 
-
-removeElementFromList()
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+function addClass(){
+  let allTr = document.querySelectorAll('tr');
+  for(let i of allTr ){
+     return i.classList.add('test');
+  }
+}
 
 // [EXTRA] JS Avanzato
 
@@ -515,17 +525,42 @@ removeElementFromList()
 
 */
 
+function halfTree(num){
+  let sum = ''
+for(let i=0;i<num;i++){
+sum += "*"
+console.log(sum);
+}
+}
+halfTree(3)
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
   Esempio:
   tree(3)
 
-    *
-   ***
-  *****
+  *
+ ***
+*****
 
 */
+
+function tree(num) {
+  for (let i = 0; i < num; i++) {
+    let ast = '';
+    let space = ((num-1) - i);
+    if (i == 0) {
+      ast += ''.repeat(space) ;
+    }
+    ast += ' '.repeat(space);
+    let zero = 2 * i + 1;
+    ast += '*'.repeat(zero);
+    console.log(ast);
+  }
+}
+
+tree(3);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
@@ -533,3 +568,23 @@ removeElementFromList()
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
+
+  /* si è stabilito che 1 non è un numero primo se no inserivo al primo if n<1 e al secondo aggiungevo n!=0
+  https://www.youmath.it/lezioni/algebra-elementare/lezioni-di-algebra-e-aritmetica-per-scuole-medie/1770-numeri-primi.html#:~:text=1%20è%20un%20numero%20primo,un%20ragazzo%20di%20scuola%20media.
+  */
+  function isItPrime(n){ 
+        if (n<=1)                 
+        return false;
+          if (n <= 3)
+          return true;
+          if (n%2 == 0 || n%3 == 0)
+          return false;
+          for (let i=5; i*i<=n; i=i+6)
+          {
+              if (n%i == 0 || n%(i+2) == 0)
+              return false;
+          }
+
+          return true;
+  } 
+  console.log(isItPrime(0));
