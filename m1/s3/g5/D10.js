@@ -572,6 +572,7 @@ tree(3);
   /* si è stabilito che 1 non è un numero primo se no inserivo al primo if n<1 e al secondo aggiungevo n!=0
   https://www.youmath.it/lezioni/algebra-elementare/lezioni-di-algebra-e-aritmetica-per-scuole-medie/1770-numeri-primi.html#:~:text=1%20è%20un%20numero%20primo,un%20ragazzo%20di%20scuola%20media.
   */
+  
   function isItPrime(n){ 
         if (n<=1)                 
         return false;
