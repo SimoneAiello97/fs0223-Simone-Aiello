@@ -188,13 +188,15 @@ h1 + p {
 }
 #span-title{
 position: relative;
+z-index: 1;
 }
 #sottolineatura{
   position: absolute;
   bottom:-15px;
   left:0;
   width: 100%;
-  opacity: 0.4;
+  opacity: 0.5;
+  z-index: 0;
 }
 
 .imgLeft {
