@@ -188,7 +188,7 @@ h1 + p {
 }
 #span-title{
 position: relative;
-z-index: 1;
+z-index: 0.8;
 }
 #sottolineatura{
   position: absolute;
