@@ -1,0 +1,73 @@
+.header img{
+    width: 14%;
+}
+#shop{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #ffdf7f;
+    border-radius: 90px;
+    align-items: center;
+    
+}
+#menu{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.header{
+    background-color: #fef7e2;
+    border-radius: 60px;
+    padding: 1.2rem;
+    text-align: center;
+}
+#menu h3{
+    padding: 1.2rem;
+    background-color: #ffdf7f;
+    border-radius: 50px;
+    
+}
+.menu-button{
+    width: 45%;
+}
+.product img{
+  width: 100%;
+  border-radius: 50px 50px 0 0
+}
+.product{
+    background-color: #fef7e2;
+    border-radius: 50px;
+    text-align: center;
+    padding: 0 0 1.2rem;
+    margin: 2rem 1rem;
+}
+.description{
+    padding: 0 1.2rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.description p{
+    display: flex;
+    flex-direction: column;
+}
+.price{
+    display: flex;
+}
+.payment{
+    padding: 0.5rem;
+    background-color: #ffdf7f;
+    border-radius: 50px;
+    width: 45%;
+    margin: 0 auto;
+}
+.article{
+    background-color: #fef7e2;
+    border-radius: 30px ;
+    padding: 1.2rem 2rem;
+}
+.article img{
+    width: 100%;
+}
