@@ -1,35 +1,60 @@
+body{
+    font-family: sans-serif;
+    color: #732104;;
+}
+
 .header img{
-    width: 14%;
+    width: 50px;
+    margin: 1rem;
 }
 #shop{
     display: flex;
-    justify-content: space-around;
-    width: 100%;
     background-color: #ffdf7f;
     border-radius: 90px;
     align-items: center;
-    
+    margin: 1rem;
+    justify-content: center;
 }
-#menu{
+#shop h2{
+    text-align: center;
+}
+.menu-button{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
 }
 .header{
+    justify-content: center;
     background-color: #fef7e2;
     border-radius: 60px;
     padding: 1.2rem;
     text-align: center;
+    justify-content: space-around;
+    margin: 0.5rem;
+    font-weight: bold;
 }
-#menu h3{
+.menu-button h3{
     padding: 1.2rem;
     background-color: #ffdf7f;
     border-radius: 50px;
-    
+    width: 40%;
+    align-self: center;
+    margin: 0.5rem;
 }
-.menu-button{
-    width: 45%;
+.title{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+section{
+    margin: 0.5rem;
+}
+.titolino1{
+    font-weight: bold;
+}
+.titolino2{
+    font-size: small;
 }
 .product img{
   width: 100%;
@@ -47,14 +72,16 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+    margin-top: 1rem;
 }
 .description p{
     display: flex;
     flex-direction: column;
+    
 }
 .price{
     display: flex;
+    
 }
 .payment{
     padding: 0.5rem;
@@ -62,12 +89,136 @@
     border-radius: 50px;
     width: 45%;
     margin: 0 auto;
+    font-weight: bold;
 }
 .article{
     background-color: #fef7e2;
     border-radius: 30px ;
     padding: 1.2rem 2rem;
+    margin: 2rem;
 }
 .article img{
     width: 100%;
+}
+.article h3{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+aside {
+    margin-top: 6rem;
+}
+@media screen and (min-width:576px) and (max-width:768px){
+    #all{
+        width: 105%;
+    }
+    .header{
+        position: sticky;
+        top: 0;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        border-radius:0;
+        margin: 0;
+    }
+    #shop{
+        display: flex;
+        margin: 0 1rem;
+        align-self: stretch;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+    }
+    nav > #shop{
+        flex: 1;
+        order: 2;
+    }
+    nav > #b1{
+        order: 1;
+    }
+    nav > #b2{
+        order: 3;
+    }
+    main h1{
+        display: block;
+        width: 100%;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        justify-content: space-around
+    }
+    section{
+        width: 45%;
+    }
+    #none1{
+        display: none;
+    }
+    aside{
+        margin: 0 auto;
+    }
+    .title{
+        text-align: left;
+        margin-left: 1rem;
+    }
+    .article{
+        margin:1rem
+    }
+    .article img{
+        margin-top: 2rem
+    }
+
+}
+@media screen and (min-width:768px){
+    body{
+    display: flex;
+    margin: 0;
+    height: 100%
+    }
+    
+    #none1{
+        display: none;
+    }
+    nav{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: space-evenly
+    }
+    nav div{
+        width: 50px;
+        height: 50px;
+    }
+    .menu-button{
+        display: block;
+    }
+    #shop{
+        width: 100%;
+        margin: 0;
+        display: flex;
+    }
+    .menu-button h3{
+        width: 100%;
+        margin: 0;
+        display:block;
+    }
+
+
+    main{
+        display: flex;
+        
+    }
+    section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: baseline;
+    width: 20%;
+    }
+    aside{
+        display:block;
+        
+    }
+    
 }
