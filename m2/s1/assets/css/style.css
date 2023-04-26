@@ -196,7 +196,7 @@ z-index: 0.8;
   left:0;
   width: 100%;
   opacity: 0.5;
-  z-index: 0;
+  z-index: -1;
 }
 
 .imgLeft {
@@ -415,7 +415,6 @@ right: -15px;
   background-color: rgba(255, 255, 255, 0.496);
   color: #4e67b7;
   margin: 1rem;
-  
   padding: 1rem;
   border: 2px solid;
   border-color: white;
