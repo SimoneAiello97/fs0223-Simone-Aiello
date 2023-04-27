@@ -7,52 +7,86 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
-main{
-    display: flex;
+body {
+  height: 100%;
 }
-#testoAlternato{
-    margin: 3rem;
-    border: 2px solid black;
-    padding: 2rem;
-    position: relative;
-    padding-right: 4.5rem;
-    display: flex;
-    flex-direction: column;
+
+main {
+  display: flex;
+  margin: 2rem;
 }
-p{
-    overflow: hidden;
-    height: 4em;
+
+#testoAlternato {
+  border: 1px solid black;
+  padding: 1rem;
+  padding-right: 4rem;
 }
-.parole{
-    display: block;overflow: hidden;
+
+.parole i {
+  position: absolute;
+  margin-left: 10px;
+  color: lightskyblue;
 }
-.parole i{
-    display: block;
-    color: #879aa9;
-    animation: fade 6s infinite;
+
+#first-word {
+  animation: wordAnimation 6s ease-in 1s infinite both;
+}
+
+#second-word {
+  animation: wordAnimation2 6s ease-in 3s infinite both;
+}
+
+#third-word {
+  animation: wordAnimation3 6s ease-in 5s infinite both;
+}
+
+@keyframes wordAnimation {
+  0% {
+      transform: translateY(-20px);
+      opacity: 0;
   }
 
+  50% {
+      transform: translateY(0);
+      opacity: 1;
+  }
 
-  @keyframes fade {
-  10%{
-    transform: translateY(0);
+  100% {
+      transform: translateY(20px);
+      opacity: 0;
   }
-    25%{
-        transform: translateY(-100%);
-    }
-    35%{
-        transform: translateY(-212%);
-    }
-    50% {
-      transform: translateY(-200%);
-    }
-    75%{
-        transform: translateY(-312%);
-    }
-    85%{
-        transform: translateY(-300%);
-    }
-    100% {
-      transform: translate(0);
-    }
+}
+
+@keyframes wordAnimation2 {
+  0% {
+      transform: translateY(-20px);
+      opacity: 0;
   }
+
+  50% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  100% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+}
+
+@keyframes wordAnimation3 {
+  0% {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+
+  50% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  100% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+}

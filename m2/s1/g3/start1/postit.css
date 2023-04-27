@@ -52,7 +52,7 @@ body{
         z-index: 10;
     }
     1%{
-        transform: rotate(5640deg) scale(5);
+        transform: rotate(560deg) scale(5);
         opacity: 1;
         
     }
