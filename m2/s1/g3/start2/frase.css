@@ -25,7 +25,7 @@ main {
 .parole i {
   position: absolute;
   margin-left: 10px;
-  color: lightskyblue;
+  color: #6a889c;
 }
 
 #first-word {
@@ -33,48 +33,14 @@ main {
 }
 
 #second-word {
-  animation: wordAnimation2 6s ease-in 3s infinite both;
+  animation: wordAnimation 6s ease-in 3s infinite both;
 }
 
 #third-word {
-  animation: wordAnimation3 6s ease-in 5s infinite both;
+  animation: wordAnimation 6s ease-in 5s infinite both;
 }
 
 @keyframes wordAnimation {
-  0% {
-      transform: translateY(-20px);
-      opacity: 0;
-  }
-
-  50% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-
-  100% {
-      transform: translateY(20px);
-      opacity: 0;
-  }
-}
-
-@keyframes wordAnimation2 {
-  0% {
-      transform: translateY(-20px);
-      opacity: 0;
-  }
-
-  50% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-
-  100% {
-      transform: translateY(20px);
-      opacity: 0;
-  }
-}
-
-@keyframes wordAnimation3 {
   0% {
       transform: translateY(-20px);
       opacity: 0;
