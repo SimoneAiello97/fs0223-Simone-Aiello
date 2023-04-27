@@ -16,15 +16,15 @@ main{
     padding: 2rem;
     position: relative;
     padding-right: 4.5rem;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 p{
-    display: flex;
+    overflow: hidden;
+    height: 4em;
 }
 .parole{
-    overflow: hidden;
-    display: block;
-    height: 100%;
+    display: block;overflow: hidden;
 }
 .parole i{
     display: block;
@@ -34,12 +34,9 @@ p{
 
 
   @keyframes fade {
-  1%{
+  10%{
     transform: translateY(0);
   }
-    15% {
-      transform: translateY(-110%);
-    }
     25%{
         transform: translateY(-100%);
     }
@@ -56,6 +53,6 @@ p{
         transform: translateY(-300%);
     }
     100% {
-      transform: translate(-400%);
+      transform: translate(0);
     }
   }
