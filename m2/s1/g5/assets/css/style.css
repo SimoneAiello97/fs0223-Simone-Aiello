@@ -274,6 +274,9 @@ footer div{
     transition: 200ms ease-in;
     opacity: 1;
 }
+#square1 img{
+    border-radius: 4px ;
+}
 /*  mobile: fino a 552px
     tablet: da 553px a 903px
     desktop: da 904px   */
@@ -332,6 +335,12 @@ footer div{
         flex-direction: row;
         width: 100%;
     }
+    .rank svg{
+        display: none;
+    }
+    .square img{
+        border-radius: 100%;
+    }
     .main-content{
         display: flex;
         flex-direction: column-reverse;
@@ -388,6 +397,9 @@ footer div{
         flex-direction: row;
         width: 48%;
     }
+    .rank svg{
+        display: none;
+    }
     .main-content{
         display: flex;
         flex-direction: column-reverse;
@@ -397,6 +409,9 @@ footer div{
         width: 80%;
         padding-left: 3rem;
         padding-bottom: 2rem;
+    }
+    .square img{
+        border-radius: 100%;
     }
     footer{
         row-gap: 0;
