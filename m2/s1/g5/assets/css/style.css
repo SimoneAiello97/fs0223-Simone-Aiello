@@ -12,7 +12,6 @@ nav{
     left: 0;
     right: 0;
     z-index: 1;
-    height: 80px;
     background-color: #ffc017;
     transition: background 300ms linear;
 }
@@ -169,6 +168,7 @@ section h2{
 
 /* CSS di ogni articolo */
 .articolo{
+    width: 100%;
     display: flex;
     padding-left: 3rem;
     margin-bottom: 2rem;
@@ -280,7 +280,10 @@ footer div{
 /*  mobile: fino a 552px
     tablet: da 553px a 903px
     desktop: da 904px   */
-
+.allArticle{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
 @media screen and (max-width: 552px) {
     nav li{
         display: none;
@@ -293,10 +296,12 @@ footer div{
         padding: 0.5rem;
     }
     .title{
-        padding-left: 0;
+        padding: 0;
+        padding-top: 1rem;
     }
     #header button{
         width: 50%;
+        padding: 0.2rem;
     }
     nav svg{
         padding: 0;
@@ -310,7 +315,7 @@ footer div{
     }
     #header h1{
         font-size: 4rem;
-        padding-top: 1rem;
+        padding-top: 2rem;
     }
     #header p{
         font-size: 1.3rem;
@@ -322,7 +327,18 @@ footer div{
     section{
         display: flex;
         flex-direction: column;
-        padding: 2rem;
+        align-items: baseline;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    .number{
+        padding-right: 1rem;
+    }
+    .rank a {
+        font-size: 0.8rem;
+    }
+    .img-articolo{
+        width: 100%;
     }
     .img-articolo img {
         width: 100%;
@@ -337,6 +353,9 @@ footer div{
     }
     .rank svg{
         display: none;
+    }
+    .title-articolo{
+        font-size: 1rem;
     }
     .square img{
         border-radius: 100%;
@@ -353,10 +372,21 @@ footer div{
     }
     .articolo{
         width:80%;
-        padding-left: 3rem;
+        padding:0;
         margin-right: 0;
         margin-bottom: 2rem;
+        font-size: 0.8rem;
     }
+    .footer-articolo{
+        font-size: 0.7rem
+    }
+.button-articolo{
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+}
+.lastChild-articolo{
+    flex-wrap: wrap;
+}
 }
 @media screen and (min-width: 553px) and (max-width:903px) {
     nav li{
@@ -403,6 +433,7 @@ footer div{
     .main-content{
         display: flex;
         flex-direction: column-reverse;
+        align-items: center;
     }
     #aside-footer{
         position: unset;
@@ -423,7 +454,7 @@ footer div{
     }
     .articolo{
         width:80%;
-        padding-left: 3rem;
+        padding:0;
         margin-right: 0;
         margin-bottom: 3rem;
     }
