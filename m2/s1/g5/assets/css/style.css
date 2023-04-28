@@ -287,6 +287,7 @@ footer div{
     }
     .button-nav{
         font-size: 0.5rem;
+        padding: 0.5rem;
     }
     .title{
         padding-left: 0;
@@ -398,8 +399,12 @@ footer div{
         padding-bottom: 2rem;
     }
     footer{
-             row-gap: 0;
-             font-size: 15px;
+        row-gap: 0;
+        font-size: 15px;
+    }
+    .allM{
+        left: 375px;
+        width: 100%;
     }
     .articolo{
         width:80%;
