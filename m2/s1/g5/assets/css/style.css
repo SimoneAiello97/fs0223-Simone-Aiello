@@ -79,7 +79,7 @@ header{
 
 }
 #header h1{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Spectral', serif;
     font-size: 125px;
 }
 #header p{
@@ -235,7 +235,7 @@ section h2{
     margin-right: 3rem;
 }
 .all-aside{
-    width: 60%;
+    width: 100%;
     position: sticky;
     top: 12rem;
 }
@@ -270,13 +270,143 @@ footer div{
     margin-right: 1rem;
     padding: 0.3rem;
 }
+.apparizioneLettera {
+    transition: 200ms ease-in;
+    opacity: 1;
+}
 /*  mobile: fino a 552px
     tablet: da 553px a 903px
     desktop: da 904px   */
-/*@media screen (max-width: 552px) {
-    
-}
 
-@media screen (min-width: 553px)and (max-width:903px) {
+@media screen and (max-width: 552px) {
+    nav li{
+        display: none;
+    }
+    nav{
+        font-size: 0.6rem;
+    }
+    .button-nav{
+        font-size: 0.5rem;
+    }
+    .title{
+        padding-left: 0;
+    }
+    #header button{
+        width: 50%;
+    }
+    nav svg{
+        padding: 0;
+        width: 70%;
+    }
+    nav li:last-child{
+        display: unset;
+    }
+    .allM{
+        display: none;
+    }
+    #header h1{
+        font-size: 4rem;
+        padding-top: 1rem;
+    }
+    #header p{
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    #header{
+        padding-bottom: 3rem;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .img-articolo img {
+        width: 100%;
+    }
+    .content-articolo {
+        font-size: 0.8rem;
+    }
+    .rank{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #aside-footer{
+        position: unset;
+        width: 80%;
+        margin-inline: auto ;
+        padding-bottom: 2rem;
+    }
+    .articolo{
+        width:80%;
+        padding-left: 3rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (min-width: 553px) and (max-width:903px) {
+    nav li{
+        font-size: 0.8rem;
+    }
+    nav svg{
+        width: 30%;
+    }
+    .button-nav{
+        font-size: 0.8rem;
+    }
+    #header button{
+        width: 50%;
+    }
+    #header h1 {
+        font-size: 4rem;
+    }
+    #header p{
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    #header{
+        padding-bottom: 3rem;
+    }
+    section{
+        padding: 1rem;
+    }
+    #section1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        column-gap: 0.2rem;
+    }
+    .rank{
+        display: flex;
+        flex-direction: row;
+        width: 48%;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #aside-footer{
+        position: unset;
+        width: 80%;
+        padding-left: 3rem;
+        padding-bottom: 2rem;
+    }
+    footer{
+             row-gap: 0;
+             font-size: 15px;
+    }
+    .articolo{
+        width:80%;
+        padding-left: 3rem;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
 
 }
