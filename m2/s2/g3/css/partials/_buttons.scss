@@ -1,0 +1,9 @@
+.button-1{
+    @include applicationButton($color-button-1)
+}
+.button-2{
+    @include applicationButton($color-button-2)
+}
+.button-3{
+    @include applicationButton($color-button-3)
+}

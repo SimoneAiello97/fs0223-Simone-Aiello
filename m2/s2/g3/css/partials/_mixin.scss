@@ -1,0 +1,22 @@
+@mixin d-flex {
+    display: flex;
+}
+@mixin d-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin d-flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $widht-logo + 10px;
+    background-color: #000;
+}
+@mixin applicationButton($base-color) {
+    width: 100px;
+    height: fit-content;
+    padding: 2px;
+    color: white;
+    background-color: $base-color;
+ }

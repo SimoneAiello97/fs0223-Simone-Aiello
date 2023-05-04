@@ -1,0 +1,31 @@
+@import './partials/_reset.scss';
+@import './partials/_colors.scss';
+@import './partials/_fonts.scss';
+@import './partials/_spacing.scss';
+@import './partials/_variables.scss';
+@import './partials/_mixin.scss';
+@import './partials/_buttons.scss';
+@import './partials/animation';
+
+nav{
+    @include d-flex-between;
+    // height: $widht-logo + 10px;
+    // background-color: #000;
+    .logo img{
+        width: $widht-logo
+    }
+    li{
+        color: $color-primary
+    }
+}
+.hero{
+    background-color: $color-bg-hero;
+    @include d-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: $widht-hero-img + 20px;
+    img{
+        width: $widht-hero-img;
+    }
+}
+

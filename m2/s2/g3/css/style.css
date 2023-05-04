@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.padding-inline-sm {
+  padding-inline: 12px;
+}
+
+.padding-inline-normal {
+  padding-inline: 24px;
+}
+
+.padding-inline-md {
+  padding-inline: 36px;
+}
+
+.padding-inline-lg {
+  padding-inline: 48px;
+}
+
+.padding-inline-xl {
+  padding-inline: 64px;
+}
+
+.padding-inline-xxl {
+  padding-inline: 80px;
+}
+
+.padding-block-sm {
+  padding-block: 12px;
+}
+
+.padding-block-normal {
+  padding-block: 24px;
+}
+
+.padding-block-md {
+  padding-block: 36px;
+}
+
+.padding-block-lg {
+  padding-block: 48px;
+}
+
+.padding-block-xl {
+  padding-block: 64px;
+}
+
+.padding-block-xxl {
+  padding-block: 80px;
+}
+
+.margin-inline-sm {
+  margin-inline: 12px;
+}
+
+.margin-inline-normal {
+  margin-inline: 24px;
+}
+
+.margin-inline-md {
+  margin-inline: 36px;
+}
+
+.margin-inline-lg {
+  margin-inline: 48px;
+}
+
+.margin-inline-xl {
+  margin-inline: 64px;
+}
+
+.margin-inline-xxl {
+  margin-inline: 80px;
+}
+
+.margin-block-sm {
+  margin-block: 12px;
+}
+
+.margin-block-normal {
+  margin-block: 24px;
+}
+
+.margin-block-md {
+  margin-block: 36px;
+}
+
+.margin-block-lg {
+  margin-block: 48px;
+}
+
+.margin-block-xl {
+  margin-block: 64px;
+}
+
+.margin-block-xxl {
+  margin-block: 80px;
+}
+
+.button-1 {
+  width: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2px;
+  color: white;
+  background-color: #0e6cff;
+}
+
+.button-2 {
+  width: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2px;
+  color: white;
+  background-color: #ff8700;
+}
+
+.button-3 {
+  width: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2px;
+  color: white;
+  background-color: #4caf50;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #000;
+}
+nav .logo img {
+  width: 40px;
+}
+nav li {
+  color: #f4f4f4;
+}
+
+.hero {
+  background-color: #640fc5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 170px;
+}
+.hero img {
+  width: 150px;
+}/*# sourceMappingURL=style.css.map */
