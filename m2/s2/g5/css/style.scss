@@ -1,13 +1,14 @@
 @import './parzials/_reset';
 @import './parzials/fonts';
 @import './parzials/_colors';
-@import './parzials/_variables';
-@import './parzials/_mixin';
 @import './parzials/_navbar';
 @import './parzials/_hero';
 @import './parzials/_scrollFilm';
 @import './parzials/_footer';
 @import './parzials/profile';
 
+body{
+    background-color: $black !important
+}
 
 

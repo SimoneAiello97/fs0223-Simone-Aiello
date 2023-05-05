@@ -1,57 +1,68 @@
-nav{
+nav {
     background-color: $black;
-    .navbar-brand img{
-    height: 50px;
-}
-.nav-link{
-    color: $white;
-    &:hover{
-        color: red;
-    }
-}
 
-.container-fluid{
-    color: $white;
-    i,p{
-        margin: 0;
-        &:hover{
+    .navbar-brand img {
+        height: 50px;
+    }
+
+    .nav-link {
+        color: $white;
+
+        &:hover {
             color: red;
-            
         }
     }
-    ul{
-                margin: 0;
+
+    .container-fluid {
+        color: $white;
+
+        i,
+        p {
+            margin: 0;
+
+            &:hover {
+                color: red;
+
             }
-    .dropdown{
-        list-style-type: none;
-        .dropdown-menu{
-            background-color: $black;
-            position: absolute;
-            left: -110px;
-            right: 0;
-            .dropdown-item{
-                width: 100%;
-                color: $white;
-                &:hover{
-                    color: $black;
-                }
-                i{
-                    &:hover{
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        .dropdown {
+            list-style-type: none;
+
+            .dropdown-menu {
+                background-color: $black;
+                position: absolute;
+                left: -110px;
+                right: 0;
+
+                .dropdown-item {
+                    width: 100%;
+                    color: $white;
+
+                    &:hover {
                         color: $black;
+                    }
+
+                    i {
+                        &:hover {
+                            color: $black;
+                        }
                     }
                 }
             }
+
+            img {
+                height: 30px;
+                margin: 0;
+            }
+
+            .dropdown-toggle {
+                color: $white;
+            }
         }
-    img{
-        height: 30px;
-        margin: 0;
     }
-    .dropdown-toggle{
-        color: $white;
-    } 
-}
-}
-}
-body{
-    background-color: $black;
 }
