@@ -10,35 +10,42 @@ nav .nav-link {
 nav .nav-link:hover {
   color: red;
 }
-
-.container-fluid {
+nav .container-fluid {
   color: #ffffff;
 }
-.container-fluid i, .container-fluid p {
+nav .container-fluid i, nav .container-fluid p {
   margin: 0;
 }
-.container-fluid i:hover, .container-fluid p:hover {
+nav .container-fluid i:hover, nav .container-fluid p:hover {
   color: red;
 }
-.container-fluid ul {
+nav .container-fluid ul {
   margin: 0;
 }
-.container-fluid .dropdown {
+nav .container-fluid .dropdown {
   list-style-type: none;
 }
-.container-fluid .dropdown .dropdown-menu {
+nav .container-fluid .dropdown .dropdown-menu {
   background-color: #141414;
-  min-width: 0;
+  position: absolute;
+  left: -110px;
+  right: 0;
 }
-.container-fluid .dropdown .dropdown-menu .dropdown-item {
-  width: -moz-fit-content;
-  width: fit-content;
+nav .container-fluid .dropdown .dropdown-menu .dropdown-item {
+  width: 100%;
+  color: #ffffff;
 }
-.container-fluid .dropdown img {
+nav .container-fluid .dropdown .dropdown-menu .dropdown-item:hover {
+  color: #141414;
+}
+nav .container-fluid .dropdown .dropdown-menu .dropdown-item i:hover {
+  color: #141414;
+}
+nav .container-fluid .dropdown img {
   height: 30px;
   margin: 0;
 }
-.container-fluid .dropdown .dropdown-toggle {
+nav .container-fluid .dropdown .dropdown-toggle {
   color: #ffffff;
 }
 
@@ -95,4 +102,9 @@ footer .btn-outline-secondary {
   font-size: 10px;
   padding: 0.2rem;
   border-radius: 0;
+}
+
+.profile {
+  background-color: #141414;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
