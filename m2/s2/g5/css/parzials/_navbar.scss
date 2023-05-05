@@ -1,0 +1,43 @@
+nav{
+    background-color: $black;
+    .navbar-brand img{
+    height: 50px;
+}
+.nav-link{
+    color: $white;
+    &:hover{
+        color: red;
+    }
+}
+}
+.container-fluid{
+    color: $white;
+    i,p{
+        margin: 0;
+        &:hover{
+            color: red;
+            
+        }
+    }
+    ul{
+                margin: 0;
+            }
+    .dropdown{
+        list-style-type: none;
+        .dropdown-menu{
+            background-color: $black;
+            min-width: 0;
+            
+            .dropdown-item{
+                width: fit-content;
+            }
+        }
+    img{
+        height: 30px;
+        margin: 0;
+    }
+    .dropdown-toggle{
+        color: $white;
+    } 
+}
+}

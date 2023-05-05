@@ -1,0 +1,82 @@
+nav {
+  background-color: #141414;
+}
+nav .navbar-brand img {
+  height: 50px;
+}
+nav .nav-link {
+  color: #ffffff;
+}
+nav .nav-link:hover {
+  color: red;
+}
+
+.container-fluid {
+  color: #ffffff;
+}
+.container-fluid i, .container-fluid p {
+  margin: 0;
+}
+.container-fluid i:hover, .container-fluid p:hover {
+  color: red;
+}
+.container-fluid ul {
+  margin: 0;
+}
+.container-fluid .dropdown {
+  list-style-type: none;
+}
+.container-fluid .dropdown .dropdown-menu {
+  background-color: #141414;
+  min-width: 0;
+}
+.container-fluid .dropdown .dropdown-menu .dropdown-item {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.container-fluid .dropdown img {
+  height: 30px;
+  margin: 0;
+}
+.container-fluid .dropdown .dropdown-toggle {
+  color: #ffffff;
+}
+
+.hero {
+  background-color: #141414;
+  color: #ffffff;
+}
+.hero i:hover, .hero p:hover {
+  color: #ffffff;
+}
+.hero .dropdown .dropdown-toogle a:hover {
+  color: #ffffff;
+}
+.hero .dropdown .dropdown-menu .dropdown-item {
+  color: #ffffff;
+  width: 100%;
+}
+.hero .dropdown .dropdown-menu .dropdown-item:hover {
+  color: #141414;
+}
+
+.scrollFilm {
+  background-color: #141414;
+  color: #ffffff;
+}
+
+footer {
+  font-size: 10px;
+  padding-top: 7rem;
+  padding-bottom: 1rem;
+  background-color: #141414;
+  color: #808080;
+}
+footer i {
+  font-size: 20px;
+}
+footer .btn-outline-secondary {
+  font-size: 10px;
+  padding: 0.2rem;
+  border-radius: 0;
+}/*# sourceMappingURL=style.css.map */

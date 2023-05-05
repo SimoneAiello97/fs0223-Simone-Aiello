@@ -1,0 +1,25 @@
+.hero{
+    background-color: $black;
+    color: $white;
+    i,p{
+        &:hover{
+            color: $white;
+        }
+    }
+    .dropdown{
+        .dropdown-toogle a{
+            &:hover{
+                color: $white;
+            }
+        }
+        .dropdown-menu{
+                .dropdown-item{
+            color: $white;
+            width: 100%;
+            &:hover{
+                color: $black;
+            }
+            }
+        }    
+    }   
+}   
