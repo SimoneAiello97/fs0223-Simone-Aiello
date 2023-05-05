@@ -1,4 +1,20 @@
 .scrollFilm{
     background-color: $black;
     color: $white;
+    .slide{
+        padding: 2rem 0;
+        overflow-x: hidden;
+        .carousel-inner{
+        overflow: initial;
+    }
+    }
+    .carousel-control-next, .carousel-control-prev{
+        width: auto
+    }
+    img{
+        transition: transform 450ms;
+        &:hover{
+            transform: scale(1.08);
+    }
+}
 }

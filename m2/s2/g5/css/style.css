@@ -64,6 +64,22 @@ nav .nav-link:hover {
   background-color: #141414;
   color: #ffffff;
 }
+.scrollFilm .slide {
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+.scrollFilm .slide .carousel-inner {
+  overflow: initial;
+}
+.scrollFilm .carousel-control-next, .scrollFilm .carousel-control-prev {
+  width: auto;
+}
+.scrollFilm img {
+  transition: transform 450ms;
+}
+.scrollFilm img:hover {
+  transform: scale(1.08);
+}
 
 footer {
   font-size: 10px;
