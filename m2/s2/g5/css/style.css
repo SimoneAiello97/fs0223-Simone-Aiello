@@ -56,15 +56,24 @@ nav .container-fluid .dropdown .dropdown-toggle {
 .hero i:hover, .hero p:hover {
   color: #ffffff;
 }
+.hero .btn {
+  border-radius: 0;
+  color: #ffffff;
+}
 .hero .dropdown .dropdown-toogle a:hover {
   color: #ffffff;
 }
+.hero .dropdown .dropdown-menu {
+  background: #141414;
+}
 .hero .dropdown .dropdown-menu .dropdown-item {
   color: #ffffff;
+  background: #141414;
   width: 100%;
 }
 .hero .dropdown .dropdown-menu .dropdown-item:hover {
   color: #141414;
+  background-color: #ffffff;
 }
 
 .scrollFilm {
@@ -91,7 +100,7 @@ nav .container-fluid .dropdown .dropdown-toggle {
 footer {
   font-size: 10px;
   padding-top: 7rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   background-color: #141414;
   color: #808080;
 }
@@ -107,4 +116,34 @@ footer .btn-outline-secondary {
 .profile {
   background-color: #141414;
   color: #ffffff;
+}
+.profile h1 {
+  font-size: 70px;
+}
+.profile .disabled {
+  width: 100%;
+}
+.profile .badge {
+  left: 10px;
+  bottom: 10px;
+  color: #ffffff;
+}
+.profile button {
+  border-radius: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.profile select {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+  color: #ffffff;
+  border-radius: 0;
+}
+.profile .row {
+  border-bottom: 1px solid #808080;
+  padding: 1rem;
+}
+.profile .row .no-border {
+  border-bottom: none;
 }/*# sourceMappingURL=style.css.map */
