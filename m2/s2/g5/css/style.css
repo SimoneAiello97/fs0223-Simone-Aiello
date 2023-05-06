@@ -211,6 +211,18 @@ footer .btn-outline-secondary {
   border-bottom: none;
 }
 
+.setting {
+  margin-bottom: 5rem;
+}
 .setting .img-fluid {
   max-width: 30px !important;
+}
+.setting .riga {
+  padding: 1rem 0;
+  border-bottom: 1px solid #a3a3a3;
+  display: flex;
+  align-items: center;
+}
+.setting .ultima {
+  border-bottom: 0px !important;
 }/*# sourceMappingURL=style.css.map */
