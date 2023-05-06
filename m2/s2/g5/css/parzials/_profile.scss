@@ -4,6 +4,10 @@
     font-size: 16px;
     h1{
         font-size: 60px;
+        @media (max-width: 768px) {
+           
+              font-size: 40px;
+            }
     }
     .grey{
         color:#ccccc6;
