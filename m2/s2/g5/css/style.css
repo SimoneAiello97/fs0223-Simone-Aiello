@@ -142,7 +142,7 @@ footer .btn-outline-secondary {
   font-size: 16px;
 }
 .profile h1 {
-  font-size: 70px;
+  font-size: 60px;
 }
 .profile .grey {
   color: #ccccc6;
@@ -153,7 +153,7 @@ footer .btn-outline-secondary {
   border-bottom: none !important;
 }
 .profile .strive {
-  width: 100%;
+  width: 95%;
   color: #ffffff;
 }
 .profile .offset-4 .btn-secondary {
