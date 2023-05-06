@@ -1,0 +1,61 @@
+.profile{
+    background-color: $black;
+    color: $white;
+    h1{
+        font-size: 70px;
+    }
+    .strive{
+        width: 100%;
+        color: $white
+    }
+    .offset-4{
+        .btn-secondary{
+        background-color:#333333
+        }
+    }
+    .img-fluid{
+        max-height: 150px;
+    }
+    .badge{
+        left: 10px;
+        bottom: 10px;
+        color: $white;
+    }
+    button{
+        border-radius: 0;
+        width: fit-content;
+    }
+    select{
+        width: fit-content;
+        background-color: black;
+        color: $white;
+        border-radius: 0;
+    }
+    p{
+        margin:0;
+    }
+    .form-check{
+        padding:0;
+        .form-check-input{
+        background-color:$black;
+        font-size: 25px;
+        margin-right: 0.5em;
+        border-radius:0 !important;
+        color: $grey;
+        margin-left:0;
+        &:checked{
+        background-color:$black;
+        border-radius:0;
+        border-color: $grey
+    }
+    }
+    }
+    
+    .row{
+        border-bottom: 1px solid $grey;
+        padding: 1rem;
+        .no-border{
+            border-bottom: none;
+        }
+    }
+}

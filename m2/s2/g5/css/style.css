@@ -133,11 +133,15 @@ footer .btn-outline-secondary {
 .profile h1 {
   font-size: 70px;
 }
-.profile .disabled {
+.profile .strive {
   width: 100%;
+  color: #ffffff;
+}
+.profile .offset-4 .btn-secondary {
+  background-color: #333333;
 }
 .profile .img-fluid {
-  max-height: auto;
+  max-height: 150px;
 }
 .profile .badge {
   left: 10px;
@@ -155,6 +159,25 @@ footer .btn-outline-secondary {
   background-color: black;
   color: #ffffff;
   border-radius: 0;
+}
+.profile p {
+  margin: 0;
+}
+.profile .form-check {
+  padding: 0;
+}
+.profile .form-check .form-check-input {
+  background-color: #141414;
+  font-size: 25px;
+  margin-right: 0.5em;
+  border-radius: 0 !important;
+  color: #808080;
+  margin-left: 0;
+}
+.profile .form-check .form-check-input:checked {
+  background-color: #141414;
+  border-radius: 0;
+  border-color: #808080;
 }
 .profile .row {
   border-bottom: 1px solid #808080;
