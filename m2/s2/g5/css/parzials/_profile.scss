@@ -1,8 +1,17 @@
 .profile{
     background-color: $black;
     color: $white;
+    font-size: 16px;
     h1{
         font-size: 70px;
+    }
+    .grey{
+        color:#ccccc6;
+        font-size:1.3rem;
+        margin-top: 1.5rem !important
+    }
+    .allrow{
+        border-bottom: none !important;
     }
     .strive{
         width: 100%;
@@ -17,9 +26,14 @@
         max-height: 150px;
     }
     .badge{
-        left: 10px;
+        left: 25px;
         bottom: 10px;
         color: $white;
+        border-color:$white;
+        border-radius:100%;
+        a{
+            color: $white;
+        }
     }
     button{
         border-radius: 0;
@@ -50,7 +64,6 @@
     }
     }
     }
-    
     .row{
         border-bottom: 1px solid $grey;
         padding: 1rem;
