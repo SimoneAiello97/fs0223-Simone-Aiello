@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -214,8 +215,25 @@ footer .btn-outline-secondary {
 .setting {
   margin-bottom: 5rem;
 }
+.setting .btn {
+  background-color: rgb(209, 205, 205);
+  color: #000;
+}
 .setting .img-fluid {
   max-width: 30px !important;
+}
+.setting .ultra {
+  max-width: 70px !important;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.1rem;
+}
+.setting a {
+  text-decoration: none;
+  color: #00a2ff;
+}
+.setting p {
+  margin: 0;
 }
 .setting .riga {
   padding: 1rem 0;
@@ -223,6 +241,14 @@ footer .btn-outline-secondary {
   display: flex;
   align-items: center;
 }
+.setting .intermedia {
+  border-bottom: 1px solid #a3a3a3;
+  padding-bottom: 1em;
+}
 .setting .ultima {
   border-bottom: 0px !important;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=style.css.map */
