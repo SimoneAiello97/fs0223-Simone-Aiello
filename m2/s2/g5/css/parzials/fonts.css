@@ -1,1 +1,4 @@
-/*# sourceMappingURL=fonts.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=fonts.css.map */

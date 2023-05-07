@@ -10,6 +10,10 @@ ul {
   list-style-type: none;
 }
 
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 nav {
   background-color: #141414;
 }
@@ -275,6 +279,38 @@ footer .btn-outline-secondary {
   border-bottom: 0px !important;
 }
 
-* {
-  font-family: "Montserrat", sans-serif;
+.row1 {
+  color: white;
+  background-color: #141414;
+}
+.row1 .row__poster {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 150px !important;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+.row1 .row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.row1 .row__poster:hover {
+  transform: scale(1.08);
+}
+.row1 .row__posters::-webkit-scrollbar {
+  display: none;
+}
+.row1 .row__posterLarge {
+  max-height: 250px;
+}
+.row1 .row__posterLarge:hover {
+  transform: scale(1.09);
+}
+.row1 .bottom220 {
+  bottom: 220px;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }/*# sourceMappingURL=style.css.map */
