@@ -26,15 +26,20 @@
         background-color:#333333
         }
     }
+    .position-relative{
+        width:fit-content !important;
+        display:flex;
+        justify-content:center
+    }
     .img-fluid{
         max-height: 150px;
     }
     .badge{
-        left: 25px;
-        bottom: 10px;
+        top: 70px;
         color: $white;
         border-color:$white;
         border-radius:100%;
+        opacity: 0.7;
         a{
             color: $white;
         }

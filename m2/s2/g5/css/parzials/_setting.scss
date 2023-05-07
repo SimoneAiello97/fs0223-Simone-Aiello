@@ -1,8 +1,16 @@
 .setting{
     margin-bottom:5rem;
+ @media (max-width: 568px) {
+           
+ font-size: 12px !important;
+ }
     .btn{
         background-color: rgb(209, 205, 205);
-        color: #000
+        color: #000;
+        @media (max-width: 568px) {
+           
+            font-size: 10px !important;
+            }
     }
     .img-fluid{
         max-width: 30px !important;
@@ -18,7 +26,12 @@
         color:$blu
     }
     p{
-        margin:0
+        margin:0;
+        @media (max-width: 568px) {
+           
+            font-size: 18px !important;
+            }
+
     }
     .riga{
         padding: 1rem 0;
@@ -33,4 +46,5 @@
     .ultima{
             border-bottom:0px !important
         }
+        
 }

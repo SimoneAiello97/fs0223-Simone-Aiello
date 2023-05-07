@@ -165,15 +165,21 @@ footer .btn-outline-secondary {
 .profile .offset-4 .btn-secondary {
   background-color: #333333;
 }
+.profile .position-relative {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  display: flex;
+  justify-content: center;
+}
 .profile .img-fluid {
   max-height: 150px;
 }
 .profile .badge {
-  left: 25px;
-  bottom: 10px;
+  top: 70px;
   color: #ffffff;
   border-color: #ffffff;
   border-radius: 100%;
+  opacity: 0.7;
 }
 .profile .badge a {
   color: #ffffff;
@@ -220,9 +226,19 @@ footer .btn-outline-secondary {
 .setting {
   margin-bottom: 5rem;
 }
+@media (max-width: 568px) {
+  .setting {
+    font-size: 12px !important;
+  }
+}
 .setting .btn {
   background-color: rgb(209, 205, 205);
   color: #000;
+}
+@media (max-width: 568px) {
+  .setting .btn {
+    font-size: 10px !important;
+  }
 }
 .setting .img-fluid {
   max-width: 30px !important;
@@ -239,6 +255,11 @@ footer .btn-outline-secondary {
 }
 .setting p {
   margin: 0;
+}
+@media (max-width: 568px) {
+  .setting p {
+    font-size: 18px !important;
+  }
 }
 .setting .riga {
   padding: 1rem 0;
