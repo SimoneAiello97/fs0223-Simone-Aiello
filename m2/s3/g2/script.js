@@ -29,8 +29,6 @@ deleteBtn.addEventListener("click", deleteName);
 
 /* Esercizio 2 */
 
-//TIMER
-
 let time = sessionStorage.getItem("TIME") || 0;
 let timer = document.querySelector('#timer');
 
