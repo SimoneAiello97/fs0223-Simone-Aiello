@@ -25,7 +25,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
         priceCard.innerHTML = movie.price + '$';
         buttonCard = document.createElement('a');
         buttonCard.classList.add('btn');
-        buttonCard.classList.add('btn-primary');
+        buttonCard.classList.add('btn-danger');
         buttonCard.innerHTML = 'Scarta'
         buttonCard.addEventListener('click', () => {
             col.remove();});
@@ -65,11 +65,18 @@ fetch('https://striveschool-api.herokuapp.com/books')
                 deleteBtn.classList.add('btn');
                 deleteBtn.classList.add('btn-primary');
                 deleteBtn.innerHTML = 'Delete';
-                
+                let elementoSelezionato = kart.indexOf(el);
+                console.log(kart);
                 
                 deleteBtn.addEventListener('click', () => {
                     newLi.remove();
-                    sessionStorage.removeItem("MOVIES");
+                    // sessionStorage.removeItem("MOVIES");
+                    // kart.indexOf(el);
+                    let movie = sessionStorage.getItem("MOVIES")
+                    let nuovo = JSON.parse(movie); 
+                    nuovo.splice(elementoSelezionato, 1);
+                    nuovo = JSON.stringify(nuovo);
+                    sessionStorage.setItem("MOVIES", nuovo);
 
                 });
                 newLi.appendChild(deleteBtn);
@@ -78,6 +85,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
             kart = JSON.stringify(kart);
             sessionStorage.setItem("MOVIES", kart);
         }
+        
         document.getElementById('carrello-nav').addEventListener('click',()=>{
             let carrello = document.getElementById('carrello');
             carrello.querySelectorAll('li').forEach((el) => {el.remove()});
