@@ -38,25 +38,55 @@ fetch('https://striveschool-api.herokuapp.com/books')
         bodyCard.appendChild(priceCard);
         bodyCard.appendChild(buttonCard);
         
-        let shopBtn = buttonCard = document.createElement('a');
+        let shopBtn = document.createElement('a');
         shopBtn.classList.add('btn');
         shopBtn.classList.add('btn-primary');
+        shopBtn.classList.add('btn-add')
         shopBtn.innerHTML = 'Compra ora'
         bodyCard.appendChild(shopBtn);
         shopBtn.addEventListener('click', () => {
-            sessionStorage.setItem("MOVIES", []);
-            let kart = sessionStorage.getItem("MOVIES");
+            let kart = sessionStorage.getItem("MOVIES") || "[]";
             kart = JSON.parse(kart)
-            kart.push(movie);
+            kart.push(movie.title);
             kart = JSON.stringify(kart);
             sessionStorage.setItem("MOVIES", kart);
-
-
-            // let carrello = document.getElementById('carrello');
-            // let newLi = document.createElement('li');
-            // newLi.innerHTML = kart;
-            // carrello.appendChild(newLi);
         })
-    })
+        })
+
+        const addKart = () =>{
+            let kart = sessionStorage.getItem("MOVIES") || "[]";
+            kart = JSON.parse(kart);
+            kart.forEach((el) => {
+                let newLi = document.createElement('li');
+                newLi.innerHTML = el;
+                document.getElementById('carrello').append(newLi);
+                
+                let deleteBtn = document.createElement('a');
+                deleteBtn.classList.add('btn');
+                deleteBtn.classList.add('btn-primary');
+                deleteBtn.innerHTML = 'Delete';
+                
+                
+                deleteBtn.addEventListener('click', () => {
+                    newLi.remove();
+                    sessionStorage.removeItem("MOVIES");
+
+                });
+                newLi.appendChild(deleteBtn);
+
+            })
+            kart = JSON.stringify(kart);
+            sessionStorage.setItem("MOVIES", kart);
+        }
+        document.getElementById('carrello-nav').addEventListener('click',()=>{
+            let carrello = document.getElementById('carrello');
+            carrello.querySelectorAll('li').forEach((el) => {el.remove()});
+            addKart()
+        } );
+
+        
+
+
+    
 })
-.catch(err => console.log(err));
+.catch(err => console.log(err))
