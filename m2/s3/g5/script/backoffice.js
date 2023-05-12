@@ -8,7 +8,7 @@ if (eventId) {
     document.getElementsByTagName('h2')[0].innerText =
       'Modifica Prodotto'
 
-    document.getElementById('save-button').innerText = 'MODIFICA EVENTO'
+    document.getElementById('save-button').innerText = 'Modifica Prodotto'
     let deleteButton = document.getElementById('delete-button')
     let cancelButton = document.getElementById('deleteBtn') //deleteBtn
     cancelButton.classList.remove('d-none')
