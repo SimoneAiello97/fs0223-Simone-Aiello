@@ -5,6 +5,13 @@ let API_KEY = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMDBiN
 let addressBarContent = new URLSearchParams(window.location.search + "?")
 let eventId = addressBarContent.get('eventID') 
 
+        let imgCard = document.querySelector('.card img')
+        let body = document.querySelector('.card')
+        let nome = body.querySelector('.card-title')
+        let prezzo = document.getElementById('price')
+        let description = document.getElementById('description')
+        let brand = body.querySelector('span')
+
 window.onload = () => {
     fetch(API_LINK + eventId,  {
         headers: {
@@ -20,6 +27,13 @@ window.onload = () => {
         }
         })
     .then((data) => {
-        let 
+        console.log(data);
+        imgCard.src = data.imageUrl
+        nome.innerHTML = data.name
+        prezzo.innerHTML = data.price + ',00$'
+        description.innerHTML = data.description 
+        brand.innerHTML = data.brand
+        
+
     })
 }

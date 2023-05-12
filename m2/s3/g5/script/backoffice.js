@@ -10,7 +10,9 @@ if (eventId) {
 
     document.getElementById('save-button').innerText = 'MODIFICA EVENTO'
     let deleteButton = document.getElementById('delete-button')
-    deleteButton.classList.remove('d-none')
+    let cancelButton = document.getElementById('deleteBtn') //deleteBtn
+    cancelButton.classList.remove('d-none')
+
     deleteButton.addEventListener('click', () => {
       fetch(API_LINK + eventId, {
         method: 'DELETE',
@@ -20,7 +22,6 @@ if (eventId) {
       })
         .then((res) => {
           if (res.ok) {
-            alert('eliminazione completata con successo')
             location.assign('./index.html')
           } else {
             throw new Error("Problema nell'eliminazione dell'evento")
@@ -88,14 +89,9 @@ if (eventId) {
       },
     })
       .then((res) => {
-        // il server, una volta accettata la vostra request, restituirà una response
-        console.log('RESPONSE DELLA CHIAMATA POST', res)
         if (res.ok) {
-          // il nuovo evento è stato salvato!! yeeee
-          alert(eventId ? 'EVENTO MODIFICATO!' : 'EVENTO CREATO!')
-          location.assign('/index.html') // riporto alla pagina home
+          location.assign('/index.html') 
         } else {
-          // 400, 404
           alert('ERRORE NEL SALVATAGGIO')
           throw new Error('ERRORE NEL SALVATAGGIO')
         }
@@ -104,7 +100,10 @@ if (eventId) {
         console.log(err)
       })
   })
+
+   
   let resetBtn = document.querySelector('#reset-button')
-  resetBtn.addEventListener('click', () =>{
+  resetBtn.addEventListener('click', (e) =>{
+    e.preventDefault()
     eventForm.reset()
-  })
+  }) 
