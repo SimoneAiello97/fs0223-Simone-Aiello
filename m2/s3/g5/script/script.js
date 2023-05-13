@@ -53,15 +53,13 @@ const getEvents = function () {
 
 window.onload = () => {
      let spinner = document.getElementById('spinner')
-     let store = document.getElementById('store')
      let header = document.querySelector('header')
      const spinners = function(){
         spinner.remove()
-        store.remove()
         header.classList.remove('d-none')
      }
- setTimeout(spinners, 1000)
- setTimeout(getEvents, 1000)
+ setTimeout(spinners, 1500)
+ setTimeout(getEvents, 1500)
  }
 
 
