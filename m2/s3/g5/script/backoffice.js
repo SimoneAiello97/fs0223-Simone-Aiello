@@ -7,8 +7,8 @@ let eventId = addressBarContent.get('eventID')
 if (eventId) {
     document.getElementsByTagName('h2')[0].innerText =
       'Modifica Prodotto'
-
-    document.getElementById('save-button').innerText = 'Modifica Prodotto'
+    document.querySelectorAll('.nav-link')[1].innerHTML = 'Edit Product'
+    document.getElementById('save-button').innerText = 'Edit Product'
     let deleteButton = document.getElementById('delete-button')
     let cancelButton = document.getElementById('deleteBtn') //deleteBtn
     cancelButton.classList.remove('d-none')

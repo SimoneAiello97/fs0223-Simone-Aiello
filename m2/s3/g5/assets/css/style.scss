@@ -36,7 +36,12 @@
   
   header { 
     background-color: #5ddcd0;
-    opacity: 0.6;
+    h1{
+        color: #fff
+    }
+    h2{
+        color: #fff;
+    }
   }
   .loop-wrapper {
     margin: 0 auto;
@@ -44,7 +49,7 @@
     display: block;
     height: 250px;
     overflow: hidden;
-    border-bottom: 3px solid #2f404752;
+    border-bottom: 5px solid #e3b338;
     color: #000;
   }
   .mountain {
@@ -80,7 +85,7 @@
       620px 0 0 50px #79b259;
     animation: hill 7s 1s linear infinite;
   }
-  .tree, .tree:nth-child(2), .tree:nth-child(3) {
+  .tree, .tree1, .tree2 {
     position: absolute;
     height: 100px; 
     width: 35px;
@@ -100,6 +105,7 @@
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg) no-repeat;
     background-size: contain;
     height: 60px;
+    z-index: 1;
   }
   .truck:before {
     content: " ";
@@ -116,8 +122,8 @@
   }
   
   .tree  { animation: tree 3s 0.000s linear infinite; }
-  .tree:nth-child(2)  { animation: tree2 2s 0.150s linear infinite; }
-  .tree:nth-child(3)  { animation: tree3 8s 0.050s linear infinite; }
+  .tree1  { animation: tree2 2s 0.150s linear infinite; }
+  .tree2  { animation: tree3 8s 0.050s linear infinite; }
   .truck  { animation: truck 4s   0.070s ease infinite; }
   .wheels  { animation: truck 4s   0.001s ease infinite; }
   .truck:before { animation: wind 1.5s   0.000s ease infinite; }
@@ -160,6 +166,7 @@
     overflow: hidden;
     position: relative;
     min-height: 250px;
+    max-height: 60vh;
 .card-img{
     object-fit: cover;
     border-radius: 15px;
@@ -170,10 +177,10 @@
     right: -100%;
     background: #1017198d;
     backdrop-filter: blur(5px);
-    border-radius: 15px;
+    border-radius: 25px;
     color: #fff;
     padding: 30px;
-    transition: 0.8s ease-out;
+    transition: 0.6s ease-out;
 }
 .card-title{
     text-transform: uppercase;
@@ -199,4 +206,30 @@
 &:hover .card-body{
     right: 0;
 }
+}
+
+#deleteBtn{
+    opacity: 1;
+&:hover {
+    text-align: center;
+    span{
+        opacity: 0.1;
+    transition: opacity 0.5s ease-out;
+    }
+    svg{
+        transform: scale(1.5);
+        transition: transform 500ms;
+    }
+}
+}
+footer{
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, 0.648) !important;
+    .text-uppercase{
+        font-size: 15px !important;
+    }
+    a{
+        text-decoration: none !important;
+        color: rgba(255, 255, 255, 0.648) !important;
+    }
 }

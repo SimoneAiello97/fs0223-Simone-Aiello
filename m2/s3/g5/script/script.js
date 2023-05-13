@@ -35,8 +35,8 @@ const getEvents = function () {
                             <h5 class="card-title">${element.name}</h5> 
                             <p class="card-text">${element.price}$</p>
                             <div class="row mx-2">
-                                <a href="./backoffice.html?eventID=${element._id}" class="btn btn-primary col-12">Modifica</a>
-                                <a href="./detail.html?eventID=${element._id}" class="btn btn-success col-12 mt-1">Scopri di più</a>
+                                <a href="./backoffice.html?eventID=${element._id}" class="btn btn-outline-light col-12">Modifica</a>
+                                <a href="./detail.html?eventID=${element._id}" class="btn btn-dark col-12 mt-1">Scopri di più</a>
                             </div>
                         </div>
                     </div>

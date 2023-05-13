@@ -33,7 +33,6 @@ window.onload = () => {
         prezzo.innerHTML = data.price + ',00$'
         description.innerHTML = data.description 
         brand.innerHTML = data.brand
-        
 
     })
 }

@@ -34,7 +34,12 @@
 }
 header {
   background-color: #5ddcd0;
-  opacity: 0.6;
+}
+header h1 {
+  color: #fff;
+}
+header h2 {
+  color: #fff;
 }
 
 .loop-wrapper {
@@ -43,7 +48,7 @@ header {
   display: block;
   height: 250px;
   overflow: hidden;
-  border-bottom: 3px solid rgba(47, 64, 71, 0.3215686275);
+  border-bottom: 5px solid #e3b338;
   color: #000;
 }
 
@@ -69,7 +74,7 @@ header {
   animation: hill 7s 1s linear infinite;
 }
 
-.tree, .tree:nth-child(2), .tree:nth-child(3) {
+.tree, .tree1, .tree2 {
   position: absolute;
   height: 100px;
   width: 35px;
@@ -91,6 +96,7 @@ header {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg) no-repeat;
   background-size: contain;
   height: 60px;
+  z-index: 1;
 }
 
 .truck:before {
@@ -110,11 +116,11 @@ header {
   animation: tree 3s 0s linear infinite;
 }
 
-.tree:nth-child(2) {
+.tree1 {
   animation: tree2 2s 0.15s linear infinite;
 }
 
-.tree:nth-child(3) {
+.tree2 {
   animation: tree3 8s 0.05s linear infinite;
 }
 
@@ -174,6 +180,7 @@ header {
   overflow: hidden;
   position: relative;
   min-height: 250px;
+  max-height: 60vh;
 }
 .card .card-img {
   -o-object-fit: cover;
@@ -187,10 +194,10 @@ header {
   background: rgba(16, 23, 25, 0.5529411765);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  border-radius: 15px;
+  border-radius: 25px;
   color: #fff;
   padding: 30px;
-  transition: 0.8s ease-out;
+  transition: 0.6s ease-out;
 }
 .card .card-title {
   text-transform: uppercase;
@@ -214,4 +221,31 @@ header {
 }
 .card:hover .card-body {
   right: 0;
+}
+
+#deleteBtn {
+  opacity: 1;
+}
+#deleteBtn:hover {
+  text-align: center;
+}
+#deleteBtn:hover span {
+  opacity: 0.1;
+  transition: opacity 0.5s ease-out;
+}
+#deleteBtn:hover svg {
+  transform: scale(1.5);
+  transition: transform 500ms;
+}
+
+footer {
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.648) !important;
+}
+footer .text-uppercase {
+  font-size: 15px !important;
+}
+footer a {
+  text-decoration: none !important;
+  color: rgba(255, 255, 255, 0.648) !important;
 }/*# sourceMappingURL=style.css.map */
