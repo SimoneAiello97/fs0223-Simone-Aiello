@@ -29,14 +29,14 @@ const getEvents = function () {
             data.forEach(element => {
                 let colTemplate = `
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-2 d-flex justify-content-center">            
-                    <div class="card flex-column align-items-center w-100" style="width: 18rem;">
-                        <img src="${element.imageUrl}" class="card-img-top" alt="img-product">
-                        <div class="card-body d-flex flex-column justify-content-between w-100">
-                            <h5 class="card-title d-flex justify-content-between align-items-center">${element.name}</h5> 
-                            <p class="card-text price fs-5 fst-italic text-secondary-emphasis">${element.price}$</p>
+                    <div class="card">
+                        <img src="${element.imageUrl}" class="card-img w-100 h-100" alt="img-product">
+                        <div class="card-body w-100 h-100 d-flex flex-column justify-content-center">
+                            <h5 class="card-title">${element.name}</h5> 
+                            <p class="card-text">${element.price}$</p>
                             <div class="row mx-2">
                                 <a href="./backoffice.html?eventID=${element._id}" class="btn btn-primary col-12">Modifica</a>
-                                <a href="./detail.html?eventID=${element._id}" class="btn btn-outline-success col-12 mt-1">Scopri di più</a>
+                                <a href="./detail.html?eventID=${element._id}" class="btn btn-success col-12 mt-1">Scopri di più</a>
                             </div>
                         </div>
                     </div>
