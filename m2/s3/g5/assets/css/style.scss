@@ -45,7 +45,7 @@
   
   header { 
     background-color: #5ddcd0;
-    animation: changeBackground 10s infinite;
+    animation: changeBackground 20s infinite;
     h1{
         color: #fff
     }
@@ -234,6 +234,13 @@
 &:hover .card-body{
     right: 0;
 }
+}
+.rotate:hover {
+  
+  svg{
+    transform: rotate(-360deg);
+    transition: 2s ease-out;
+  }
 }
 
 #deleteBtn{
