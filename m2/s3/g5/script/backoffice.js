@@ -92,12 +92,17 @@ if (eventId) {
         if (res.ok) {
           location.assign('/index.html') 
         } else {
-          alert('ERRORE NEL SALVATAGGIO')
-          throw new Error('ERRORE NEL SALVATAGGIO')
+          throw new Error('ERRORE NEL SALVATAGGIO. COMPILA TUTTI I CAMPI!!!')
         }
       })
       .catch((err) => {
         console.log(err)
+
+        let warning = document.createElement('div');
+        warning.classList.add('alert', 'alert-danger');
+        warning.textContent = err.message;
+        document.getElementById('event-form').prepend(warning);
+
       })
   })
 
