@@ -44,12 +44,30 @@
 }
 header {
   background-color: #5ddcd0;
+  animation: changeBackground 10s infinite;
 }
 header h1 {
   color: #fff;
 }
 header h2 {
   color: #fff;
+}
+@keyframes changeBackground {
+  0% {
+    background-color: #5ddcd0;
+  }
+  25% {
+    background-color: #b12800;
+  }
+  50% {
+    background-color: rgba(6, 5, 5, 0.653);
+  }
+  75% {
+    background-color: #b18200;
+  }
+  100% {
+    background-color: #5ddcd0;
+  }
 }
 
 .loop-wrapper {

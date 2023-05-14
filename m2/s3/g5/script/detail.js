@@ -12,7 +12,7 @@ let eventId = addressBarContent.get('eventID')
         let description = document.getElementById('description')
         let brand = body.querySelector('span')
 
-window.onload = () => {
+const details = () => {
     fetch(API_LINK + eventId,  {
         headers: {
             "Authorization": API_KEY
@@ -35,4 +35,15 @@ window.onload = () => {
         brand.innerHTML = data.brand
 
     })
+}
+
+window.onload = () => {
+    let spinner = document.getElementById('spinner')
+    let container = document.getElementById('container')
+    const spinners = function(){
+       spinner.remove()
+       container.classList.remove('d-none')
+    }
+setTimeout(spinners, 1000)
+setTimeout(details, 1000)
 }

@@ -52,15 +52,5 @@ const getEvents = function () {
 }
 
 window.onload = () => {
-     let spinner = document.getElementById('spinner')
-     let header = document.querySelector('header')
-     const spinners = function(){
-        spinner.remove()
-        header.classList.remove('d-none')
-     }
- setTimeout(spinners, 1500)
- setTimeout(getEvents, 1500)
+ getEvents()
  }
-
-
- 
