@@ -69,3 +69,28 @@ var Lavoratore = /** @class */ (function (_super) {
 }(LavoratoreTasseApplicate));
 var marioRossi = new Lavoratore(10000);
 console.log("🚀 ~ file: script.ts:78 ~ marioRossi:", marioRossi);
+var Persona = /** @class */ (function () {
+    function Persona(nome) {
+        this.nome = nome;
+    }
+    Object.defineProperty(Persona.prototype, "trovaNome", {
+        get: function () {
+            return "il mio nome \u00E8 ".concat(this.nome);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Persona.prototype, "cambiaNome", {
+        set: function (nome) {
+            this.nome = nome;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Persona;
+}());
+var user1 = new Persona('Mario');
+user1.nome;
+console.log("🚀 ~ file: script.ts:88 ~ user1.nome:", user1.trovaNome);
+user1.cambiaNome = 'piero';
+console.log(user1.nome);

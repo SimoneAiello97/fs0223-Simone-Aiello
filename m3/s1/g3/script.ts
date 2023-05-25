@@ -69,3 +69,24 @@ class Lavoratore extends LavoratoreTasseApplicate {
 }
 let marioRossi = new Lavoratore(10000)
 console.log("🚀 ~ file: script.ts:78 ~ marioRossi:", marioRossi)
+
+
+class Persona {
+    nome:string
+    constructor(nome: string) {
+         this.nome = nome
+}
+get trovaNome() {
+    return  `il mio nome è ${this.nome}`
+}
+set cambiaNome(nome:string) {
+    this.nome = nome
+}
+}
+
+let user1= new Persona('Mario')
+
+user1.nome
+console.log("🚀 ~ file: script.ts:88 ~ user1.nome:", user1.trovaNome)
+user1.cambiaNome = 'piero'
+console.log(user1.nome);
