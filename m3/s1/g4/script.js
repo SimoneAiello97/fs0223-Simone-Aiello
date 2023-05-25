@@ -30,7 +30,7 @@ fetch('./Abbigliamento.json')
     .then(function (data) {
     data.forEach(function (element) {
         var nuovoCapo = new CapiAbbigliamento(element.id, element.codprod, element.collezione, element.capo, element.modello, element.quantita, element.colore, element.prezzoivaesclusa, element.prezzoivainclusa, element.disponibile, element.saldo);
-        console.log("nuovo capo", nuovoCapo);
+        // console.log("nuovo capo", nuovoCapo)
         arr.push(nuovoCapo);
         arrPrezzi.push(nuovoCapo.mostraPrezzo);
     });
@@ -58,15 +58,13 @@ var CapiAbbigliamento = /** @class */ (function (_super) {
     }
     Object.defineProperty(CapiAbbigliamento.prototype, "mostraPrezzo", {
         get: function () {
-            return this.saldo + '$';
+            var prezzoSaldato = this.prezzoivainclusa - (this.prezzoivaesclusa * this.saldo / 100);
+            return prezzoSaldato + '$';
         },
         enumerable: false,
         configurable: true
     });
-    CapiAbbigliamento.prototype.getacquistocapo = function () {
-        throw new Error("Method not implemented.");
-    };
     return CapiAbbigliamento;
 }(CapiAbbigliamentoAstratta));
 console.log("Array di tutti i capi", arr);
-console.log("Array di tutti i prezzi dei capi", arrPrezzi);
+console.log("Array di tutti i prezzi dei capi saldati", arrPrezzi);
