@@ -59,7 +59,7 @@ var CapiAbbigliamento = /** @class */ (function (_super) {
     Object.defineProperty(CapiAbbigliamento.prototype, "mostraPrezzo", {
         get: function () {
             var prezzoSaldato = this.prezzoivainclusa - (this.prezzoivaesclusa * this.saldo / 100);
-            return prezzoSaldato + '$';
+            return prezzoSaldato + '€';
         },
         enumerable: false,
         configurable: true

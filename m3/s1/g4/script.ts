@@ -51,7 +51,7 @@ abstract class CapiAbbigliamentoAstratta{
 class CapiAbbigliamento extends CapiAbbigliamentoAstratta{
     get mostraPrezzo():string{
         let prezzoSaldato = this.prezzoivainclusa - (this.prezzoivaesclusa * this.saldo / 100)
-        return prezzoSaldato + '$'
+        return prezzoSaldato + '€'
     }
 
     id:number
