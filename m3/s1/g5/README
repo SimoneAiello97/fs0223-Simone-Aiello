@@ -1,2 +1,3 @@
 Lavoro completo anche degli extra. Il lavoro è strutturato per far si che li legga in console tutto in maniera chiara e il codice è commentato punto per punto per spiegare i vari passaggi.
-Ho usato un SetTimeout per differenziare il metodo chiamata la prima attivata subito e la seconda attivata col setTimeout (inserito al suo interno anche gli altri metodi in modo che venga considerata anche la seconda tardiva chiamata)
+Ho usato un SetTimeout per differenziare il metodo chiamata la prima attivata subito e la seconda attivata col setTimeout (inserito al suo interno anche gli altri metodi in modo che venga considerata anche la seconda tardiva chiamata).
+Ho decorato l'HTML con una cosa simpatica.
