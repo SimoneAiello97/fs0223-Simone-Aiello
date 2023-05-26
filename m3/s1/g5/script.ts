@@ -2,7 +2,7 @@
 interface Smartphone {
     carica: number; /* rappresenta il quantitativo di euro disponibile per le chiamate. */
     numeroChiamate: number; /*  numero chiamate effettuate */
-    costoMinuto:number ; /*  imposta uin valore standard a 0.20 */
+    costoMinuto:number ; /*  imposta un valore standard a 0.20 */
 
     ricarica(unaRicarica: number): void;
     chiamata(minutiDurata: number): void;
@@ -76,19 +76,21 @@ class User implements Smartphone{
     
     filtraChiamate (data:string){
         this.registroChiamate.forEach((element) => {
+            let dataSplittata = data.split('T') /* splittato la stringa per far si che non si legga la "T" */
+            
             let dataRicercata:Date = new Date(data);
             dataRicercata.setSeconds(0)
             dataRicercata.setMilliseconds(0)
-            
             let dataConvertita:Date = element.dataOra
             dataConvertita.setSeconds(0)
             dataConvertita.setMilliseconds(0)
+            
             if(dataRicercata.getTime() == dataConvertita.getTime())
             {
-                console.log(`è stata effettuata a questa data e ora: "${data.split('T')}" la chiamata numero: ${element.id}`);
+                console.log(`è stata effettuata a questa data e ora: "${dataSplittata[0] + ' ' + dataSplittata[1]}" la chiamata numero: ${element.id}`);
             }
             else {
-                console.log(`Non è stata effettuata nessuna chiamata a questa data: ${data.split('T')}`);
+                console.log(`Non è stata effettuata nessuna chiamata a questa data: ${dataSplittata[0] + ' ' + dataSplittata[1]}`);
             }
         })
     }
@@ -124,10 +126,10 @@ console.log('Array di registro chiamate:', utente1.registroChiamate)
 let numeroCasuale = Math.floor(Math.random()*5 +1)
 /* metto un numero casuale da uno a 5 che passerà come parametro nel metodo chiamata */
 utente1.chiamata(numeroCasuale)
-/* faccio un setTimeout che attivi la seconda chiamata e il metodo tot secondi quanto il numero casuale */
+/* faccio un setTimeout che attivi la seconda chiamata e il metodo tot secondi quanto il numero casuale (se si volessero i minuti efettuati basta moltiplicare per 60 il nuomero casuale * 1000) */
 setTimeout(() =>{
     utente1.chiamata(4)
     utente1.mostraRegistroChiamate()
-    // il parametro data deve essere così: es: '26/5/2023 14:12' attenzione, qualora ci fosse uno zero non va inserito es: 15:9 NON 15:09
-    utente1.filtraChiamate('2023-05-26T15:50')
+    // il parametro data deve essere così: es: '2023-05-26T15:50'
+    utente1.filtraChiamate('2023-05-26T16:27')
 }, numeroCasuale*1000)

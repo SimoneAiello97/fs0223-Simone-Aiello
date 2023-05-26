@@ -52,6 +52,7 @@ var User = /** @class */ (function () {
     };
     User.prototype.filtraChiamate = function (data) {
         this.registroChiamate.forEach(function (element) {
+            var dataSplittata = data.split('T'); /* splittato la stringa per far si che non si legga la "T" */
             var dataRicercata = new Date(data);
             dataRicercata.setSeconds(0);
             dataRicercata.setMilliseconds(0);
@@ -59,10 +60,10 @@ var User = /** @class */ (function () {
             dataConvertita.setSeconds(0);
             dataConvertita.setMilliseconds(0);
             if (dataRicercata.getTime() == dataConvertita.getTime()) {
-                console.log("\u00E8 stata effettuata a questa data e ora: \"".concat(data.split('T'), "\" la chiamata numero: ").concat(element.id));
+                console.log("\u00E8 stata effettuata a questa data e ora: \"".concat(dataSplittata[0] + ' ' + dataSplittata[1], "\" la chiamata numero: ").concat(element.id));
             }
             else {
-                console.log("Non \u00E8 stata effettuata nessuna chiamata a questa data: ".concat(data.split('T')));
+                console.log("Non \u00E8 stata effettuata nessuna chiamata a questa data: ".concat(dataSplittata[0] + ' ' + dataSplittata[1]));
             }
         });
     };
@@ -95,10 +96,10 @@ console.log('Array di registro chiamate:', utente1.registroChiamate);
 var numeroCasuale = Math.floor(Math.random() * 5 + 1);
 /* metto un numero casuale da uno a 5 che passerà come parametro nel metodo chiamata */
 utente1.chiamata(numeroCasuale);
-/* faccio un setTimeout che attivi la seconda chiamata e il metodo tot secondi quanto il numero casuale */
+/* faccio un setTimeout che attivi la seconda chiamata e il metodo tot secondi quanto il numero casuale (se si volessero i minuti efettuati basta moltiplicare per 60 il nuomero casuale * 1000) */
 setTimeout(function () {
     utente1.chiamata(4);
     utente1.mostraRegistroChiamate();
-    // il parametro data deve essere così: es: '26/5/2023 14:12' attenzione, qualora ci fosse uno zero non va inserito es: 15:9 NON 15:09
-    utente1.filtraChiamate('2023-05-26T15:50');
+    // il parametro data deve essere così: es: '2023-05-26T15:50'
+    utente1.filtraChiamate('2023-05-26T16:27');
 }, numeroCasuale * 1000);
