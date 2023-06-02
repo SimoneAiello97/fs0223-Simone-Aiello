@@ -4,14 +4,10 @@ import { HomeComponent } from './Pages/home/home.component';
 import { CheckedComponent } from './Pages/checked/checked.component';
 
 const routes: Routes = [
-  {
-  path:'',
-  component: HomeComponent,
-  },
-  {
-    path:'checked',
-    component: CheckedComponent,
-    }
+  {  path:'',  component: HomeComponent, children: [
+    { path:'', component: CheckedComponent}
+  ]  },
+
 ];
 
 @NgModule({

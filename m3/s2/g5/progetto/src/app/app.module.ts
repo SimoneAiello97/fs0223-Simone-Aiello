@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { CheckedComponent } from './Pages/checked/checked.component';
 import { FormsModule } from '@angular/forms';
+import { NoteCardComponent } from './Pages/note-card/note-card.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CheckedComponent,
+    NoteCardComponent
   ],
   imports: [
     BrowserModule,
