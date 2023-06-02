@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TodoClass } from 'src/app/Models/todo-class';
 import { TodoServiceService } from 'src/app/todo-service.service';
 
@@ -12,7 +13,8 @@ todos: TodoClass[] = [];
 todo:TodoClass = new TodoClass('',false, '');
 
 
-constructor(private todoSvc:TodoServiceService){}
+
+constructor(private todoSvc:TodoServiceService, private router: ActivatedRoute){}
 
 create(){
   this.todoSvc.addTodo(this.todo)
@@ -41,8 +43,10 @@ delete(id?:number){
 
   })
 }
-edit(){
-
+edit(id?:number){
+  this.todoSvc.getSingleTodo(id)
+  .then(res => this.todos = res
+    )
   this.todoSvc.editTodo(this.todo)
     .then(res => console.log(res));
 }

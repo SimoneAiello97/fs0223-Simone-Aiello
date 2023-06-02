@@ -9,6 +9,12 @@ export class TodoServiceService {
   apiUrl = 'http://localhost:3000/todo'
   constructor() {}
 
+  getSingleTodo(id:number = 0): Promise<TodoClass[]>{
+    {
+      return fetch(this.apiUrl+ '/' + id).then(response => response.json());
+    }
+
+  }
   getTodo():Promise<TodoClass[]> {
     return fetch(this.apiUrl).then(response => response.json())
   }
@@ -25,7 +31,7 @@ export class TodoServiceService {
   editTodo(todo:TodoClass):Promise<TodoClass> {
     return fetch(this.apiUrl + '/' + todo.id, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(todo)
     })
     .then(response => response.json())
