@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TodoClass } from 'src/app/Models/todo-class';
 import { TodoServiceService } from 'src/app/todo-service.service';
 
@@ -10,7 +10,7 @@ import { TodoServiceService } from 'src/app/todo-service.service';
 })
 export class CheckedComponent {
   todos: TodoClass[] = [];
-  constructor(private todoSvc:TodoServiceService, route:ActivatedRoute){}
+  constructor(private todoSvc:TodoServiceService,private router: Router, route:ActivatedRoute){}
   ngOnInit(){
 
     this.getTodo();
@@ -22,4 +22,8 @@ export class CheckedComponent {
       this.todos = resp;
     })
   }
+  deleteNote(id:number =  0){
+    this.todoSvc.deleteTodo(id)
+    this.getTodo()
+    }
 }

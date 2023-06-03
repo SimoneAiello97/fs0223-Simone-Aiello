@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TodoServiceService } from 'src/app/todo-service.service';
 
@@ -10,7 +10,13 @@ import { TodoServiceService } from 'src/app/todo-service.service';
 export class NoteCardComponent {
 @Input() title!: string
 @Input() subtitle!: string
+@Input( ) link:any
+
+@Output('delete') deleteEvent: EventEmitter<void> = new EventEmitter<void>();
 
 constructor(){}
 
+onXButtonClick(){
+  this.deleteEvent.emit()
+}
 }
