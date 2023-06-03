@@ -7,6 +7,7 @@ import { HomeComponent } from './Pages/home/home.component';
 import { CheckedComponent } from './Pages/checked/checked.component';
 import { FormsModule } from '@angular/forms';
 import { NoteCardComponent } from './Pages/note-card/note-card.component';
+import { NoteDetailsComponent } from './Pages/note-details/note-details.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NoteCardComponent } from './Pages/note-card/note-card.component';
     AppComponent,
     HomeComponent,
     CheckedComponent,
-    NoteCardComponent
+    NoteCardComponent,
+    NoteDetailsComponent
   ],
   imports: [
     BrowserModule,

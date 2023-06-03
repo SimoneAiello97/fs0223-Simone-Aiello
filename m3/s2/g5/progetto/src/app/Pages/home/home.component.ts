@@ -43,11 +43,11 @@ delete(id?:number){
 
   })
 }
-edit(id?:number){
-  this.todoSvc.getSingleTodo(id)
+/* edit(id?:number){
+  this.todoSvc.getSingleTodo(todo.id)
   .then(res => this.todos = res
     )
   this.todoSvc.editTodo(this.todo)
     .then(res => console.log(res));
-}
+} */
 }

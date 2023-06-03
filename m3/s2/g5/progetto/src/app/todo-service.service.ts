@@ -9,7 +9,7 @@ export class TodoServiceService {
   apiUrl = 'http://localhost:3000/todo'
   constructor() {}
 
-  getSingleTodo(id:number = 0): Promise<TodoClass[]>{
+  getSingleTodo(id:number): Promise<TodoClass[]>{
     {
       return fetch(this.apiUrl+ '/' + id).then(response => response.json());
     }
