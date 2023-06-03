@@ -16,6 +16,7 @@ export class NoteCardComponent {
 
 constructor(){}
 
+
 onXButtonClick(){
   this.deleteEvent.emit()
 }

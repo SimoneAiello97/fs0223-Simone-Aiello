@@ -13,17 +13,17 @@ export class CheckedComponent {
   constructor(private todoSvc:TodoServiceService,private router: Router, route:ActivatedRoute){}
   ngOnInit(){
 
-    this.getTodo();
+    this.getTodos();
 
   }
 
-  getTodo(){
+  getTodos(){
     this.todoSvc.getTodo().then(resp =>{
       this.todos = resp;
     })
   }
   deleteNote(id:number =  0){
     this.todoSvc.deleteTodo(id)
-    this.getTodo()
+    this.getTodos();
     }
 }
