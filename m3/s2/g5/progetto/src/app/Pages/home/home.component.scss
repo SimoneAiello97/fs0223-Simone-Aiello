@@ -26,6 +26,22 @@
 
   h1{
     color: #ffffff;
-    font-size: 24px;
+    font-size: 30px;
   }
+}
+.completed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  background: white;
+  cursor: pointer;
+  padding-bottom: 3px;
+  color: #12c483;
+}
+.completed-box{
+  background: linear-gradient(to right, #12c612, #13c3ef) ;
+  padding: 2px;
+  margin: 5px 0;
+
 }

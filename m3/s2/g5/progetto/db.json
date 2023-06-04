@@ -3,8 +3,50 @@
     {
       "title": "prova",
       "completed": false,
-      "subtitle": "bisogna fare il check!!",
+      "subtitle": "bisogna fare il check!!!",
       "id": 8
+    },
+    {
+      "title": "Prova numero boh!",
+      "completed": false,
+      "subtitle": "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore quia sapiente consectetur animi aliquid nisi minima non ab autem libero earum blanditiis corrupti excepturi, iusto quibusdam incidunt corporis ipsum debitis?\n",
+      "id": 9
+    },
+    {
+      "title": "Simone che fa cose",
+      "completed": true,
+      "subtitle": "Simone si é reso conto che non sa usare affatto Angular",
+      "id": 10
+    },
+    {
+      "title": "Nota per Epicode!!",
+      "completed": false,
+      "subtitle": "Servirebbe una Pausa!",
+      "id": 11
+    },
+    {
+      "title": "Ripassare Angular",
+      "completed": false,
+      "subtitle": "siamo sinceri, questa settimana ho capito poco!!",
+      "id": 12
+    },
+    {
+      "title": "Mungere i tori!",
+      "completed": true,
+      "subtitle": "oramai scrivo qualsiasi cosa",
+      "id": 13
+    },
+    {
+      "title": "Si puó scrivere soltanto il title come nota!!! ",
+      "completed": false,
+      "subtitle": "",
+      "id": 14
+    },
+    {
+      "title": "prova",
+      "completed": false,
+      "subtitle": "",
+      "id": 15
     }
   ]
 }

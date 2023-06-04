@@ -14,11 +14,17 @@
       transition-delay: 0.35s;
       transform: scale(1);
     }
+    .checkBtn{
+      opacity: 1;
+      transition-delay: 0.35s;
+      transform: scale(1);
+    }
 
   }
 
   .note-card-content{
     padding: 25px;
+    text-decoration: none;
     .note-card-title{
       font-size: 22px;
       font-weight: bold;
@@ -75,13 +81,33 @@
     color: red;
   }
 }
-.checkBtn{
+.checkBtn
+{
   position: absolute;
-  top: 12px;
-  left: 12px;
+  bottom: 12px;
+  right: 12px;
   height: 28px;
   width: 28px;
   display: flex;
 align-items: center;
 justify-content: center;
+transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+background-color: rgb(215, 238, 200);
+border-radius: 4px;
+opacity: 0;
+transform: scale(0.35);
+&:hover{
+  background-color: rgb(81, 207, 43);
+  svg{
+    color: rgb(252, 252, 252);
+  }
+}
+&:active{
+  background-color: darkgreen;
+  svg{color: rgb(150, 142, 142)}
+}
+svg{
+  font-size: 20px;
+  color: green;
+}
 }

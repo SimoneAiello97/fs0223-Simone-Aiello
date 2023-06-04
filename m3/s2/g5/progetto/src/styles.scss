@@ -1,6 +1,12 @@
 /* Global Style */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
 html, body{
   height: 100%;
   font-size: 18px !important;
   overflow: hidden !important;
+  margin: 0;
+}
+*{
+  font-family:  'Kaisei Opti', serif;
+  text-decoration: none;
 }

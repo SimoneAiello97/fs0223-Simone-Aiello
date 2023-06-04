@@ -11,6 +11,7 @@ import { TodoServiceService } from 'src/app/todo-service.service';
 })
 export class CheckedComponent {
   todos: TodoClass[] = [];
+  loading:boolean = true;
   constructor(private todoSvc:TodoServiceService,private router: Router, route:ActivatedRoute){}
   ngOnInit(){
 
@@ -20,16 +21,18 @@ export class CheckedComponent {
 
   getTodos(){
     this.todoSvc.getTodo().then(resp =>{
-      this.todos = resp;
+      this.todos = resp.filter(todo => !todo.completed)
+      this.loading = false;
     })
   }
   deleteNote(id:number =  0){
-    this.todoSvc.deleteTodo(id)
-    this.getTodos();
+    this.todoSvc.deleteTodo(id).then(res => {
+
+      this.getTodos();
+    })
     }
 
     checked(todo:TodoClass){
-
       if(!todo.completed) {
         todo.completed = true;
         console.log(todo);
@@ -37,6 +40,10 @@ export class CheckedComponent {
         todo.completed = false
         console.log(todo);
       }
+      this.todoSvc.editTodo(todo).then(res => {
+
+        this.getTodos();
+      })
     }
   /*   searchInput(e:any){
       let value = e.target.value.toLowerCase()

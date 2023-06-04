@@ -32,13 +32,14 @@ ngOnInit(){
 
 }
   onSubmit(form:NgForm){
-    this.router.navigateByUrl('/')
     if(this.new){
       this.todo.title = form.value.title
       this.todo.subtitle = form.value.subtitle
       this.todoSvc.addTodo(this.todo).then(res => console.log(res))
+      this.router.navigateByUrl('/')
     }else{
       this.todoSvc.editTodo(this.todo).then(res => console.log(res))
+      this.router.navigateByUrl('/')
     }
   }
 

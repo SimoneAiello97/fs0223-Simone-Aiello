@@ -3,6 +3,9 @@
   <div class="top-bar">
     <h1>Note Mate</h1>
   </div>
+  <div class="completed-box">
+    <div [routerLink]="['/completed']" class="completed">-> Completati <-</div>
+  </div>
 
 
   <div class="page-content">
@@ -10,24 +13,3 @@
   </div>
 </div>
 
-
-<!-- <form>
-        <input [(ngModel)]="todo.title" type="text" class="form-control" placeholder="Gusto" name="gusto">
-        <input [(ngModel)]="todo.subtitle" type="text" class="form-control" placeholder="Gusto" name="gusto">
-        <button (click)="create()" class="btn btn-primary">Crea</button>
-      </form>
-<table class="table">
-  <tr *ngFor="let todo of todos">
-    <td>{{todo.title}}</td>
-    <td>{{todo.subtitle}}</td>
-    <td>
-
-      <button class="btn btn-danger" (click)="delete(todo.id)">Elimina</button>
-    </td>
-    <td>
-      <button class="btn btn-danger" >Modifica</button>
-
-    </td>
-  </tr>
-</table>
- -->

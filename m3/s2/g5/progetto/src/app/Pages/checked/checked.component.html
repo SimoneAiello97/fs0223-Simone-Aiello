@@ -1,11 +1,8 @@
 <div class="main-container">
-  <div class="search-bar-container">
-    <a [routerLink]="['completed']"><app-completed></app-completed></a>
-  </div>
-
   <div class="notes-list">
+    <div class="ring" *ngIf="loading">Loading<span></span></div>
   <app-note-card
-  *ngFor="let todo of todos; index as i"
+  *ngFor="let todo of todos;"
   [link]="todo.id"
   (delete)="deleteNote(todo.id)"
   (check)="checked(todo)"
