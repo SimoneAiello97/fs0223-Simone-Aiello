@@ -13,11 +13,14 @@ export class NoteCardComponent {
 @Input( ) link:any
 
 @Output('delete') deleteEvent: EventEmitter<void> = new EventEmitter<void>();
-
+@Output('check') checkEvent: EventEmitter<void> = new EventEmitter<void>()
 constructor(){}
 
 
 onXButtonClick(){
   this.deleteEvent.emit()
+}
+check(){
+  this.checkEvent.emit()
 }
 }

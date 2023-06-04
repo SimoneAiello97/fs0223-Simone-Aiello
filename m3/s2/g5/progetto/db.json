@@ -2,13 +2,9 @@
   "todo": [
     {
       "title": "prova",
-      "subtitle": "continuo a provare",
-      "id": 1
-    },
-    {
-      "title": "prova boh",
-      "subtitle": "continuo a modificare!",
-      "id": 7
+      "completed": false,
+      "subtitle": "bisogna fare il check!!",
+      "id": 8
     }
   ]
 }

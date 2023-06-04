@@ -1,11 +1,6 @@
 <div class="main-container">
   <div class="search-bar-container">
-    <div>
-      <p>
-        <input type="text" placeholder="Filtra nota">
-        <span><i class="bi bi-search"></i></span>
-      </p>
-    </div>
+    <a [routerLink]="['completed']"><app-completed></app-completed></a>
   </div>
 
   <div class="notes-list">
@@ -13,6 +8,7 @@
   *ngFor="let todo of todos; index as i"
   [link]="todo.id"
   (delete)="deleteNote(todo.id)"
+  (check)="checked(todo)"
   [title]="todo.title"
   [subtitle]="todo.subtitle"
   ></app-note-card>
