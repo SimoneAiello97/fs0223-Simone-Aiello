@@ -1,0 +1,18 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+  </div>
+</nav>
+<div>Hai messo {{likes | json}} mi piace</div>
+<div class="main-container d-flex flex-wrap">
+  <div class="card me-2" style="width: 18rem;" *ngFor="let photo of photos">
+  <img src="{{photo.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">{{photo.title}}</p>
+    <button type="button" class="btn btn-outline-danger" (click)="delete(photo.id)">Cancella</button>
+    <button type="button" class="btn btn-outline-primary" (click)="addLike(photo.id)" data-bs-toggle="button" aria-pressed="true">Mi Piace</button>
+  </div>
+</div>
+
+</div>
+
