@@ -1,0 +1,43 @@
+<div class="container ">
+  <h1>Crea il tuo Supereroe!</h1>
+  <form [formGroup]="form">
+
+    <div class="form-row row ">
+      <div class="form-group col-12 fw-bold p-0">
+        Name
+        <input type="text" class="form-control " placeholder="Inserisci il nome!" formControlName="name">
+      </div>
+      <span *ngIf="isValid('name')" class="alert alert-danger">Campo obbligatorio</span>
+      <div class="form-group col-12 p-0 fw-bold">
+        Alter Ego
+          <input type="text" class="form-control" placeholder="Inserisci l'alter ego!" formControlName="alterEgo">
+        </div>
+        <span *ngIf="isValid('alterEgo')" class="alert alert-danger">Campo obbligatorio</span>
+      <div class="form-group col-12 p-0 fw-bold">
+         Super Potere
+        <select class="form-control" formControlName="power">
+          <option value="" >--Scegli il superpotere--</option>
+          <option value="invisible">Invisibilità</option>
+          <option value="fast">Velocità supersonica</option>
+          <option value="fly">Volare</option>
+        </select>
+      </div>
+      <span *ngIf="isValid('power')" class="alert alert-danger">Campo obbligatorio</span>
+    <div class="form-group col-12 p-0 fw-bold">
+      Nemico
+      <input type="text" class="form-control" placeholder="Inserisci il suo nemico!" formControlName="enemy">
+  </div>
+  <div class="form-group col-12 p-0 fw-bold">
+    Pianeta
+    <input type="text" class="form-control" placeholder="Inserisci il pianeta di provenienza!" formControlName="planet">
+  </div>
+  <span *ngIf="isValid('planet')" class="alert alert-danger">Campo obbligatorio, minimo 5 caratteri</span>
+<div class="form-group col-12 p-0 fw-bold">
+  Debolezza
+  <input type="text" class="form-control" placeholder="Inserisci la sua debolezza!" formControlName="weakness">
+</div>
+
+<button [disabled]="form.invalid" class="btn btn-primary w-100 col-12" (click)="logghiamoIlForm()">Crea</button>
+    </div>
+  </form>
+</div>

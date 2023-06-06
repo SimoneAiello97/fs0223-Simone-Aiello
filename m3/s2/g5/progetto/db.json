@@ -44,7 +44,7 @@
     },
     {
       "title": "prova",
-      "completed": false,
+      "completed": true,
       "subtitle": "",
       "id": 15
     }
