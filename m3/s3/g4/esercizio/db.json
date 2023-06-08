@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "email": "pippo@gmail.com",
+      "password": "$2a$10$/ESK3D5aBsSERmLHd4GW5eq28lPQbz2FIG1ZD29OkHPkG7cUVPpjy",
+      "name": "Simone",
+      "surname": "simone",
+      "id": 1
+    },
+    {
+      "email": "pippo@gmail.com",
+      "password": "$2a$10$uYh3JwETZcQRvpRiuGQQrecst.WyMrfeELuB5YFJjxrGggQ1jKK42",
+      "name": "Simone",
+      "surname": "simone",
+      "id": 2
+    },
+    {
+      "email": "pippo@gamil.com",
+      "password": "$2a$10$Wroh4xOdcZO4hkTx6g0T6OHjRdAW4w..H5wBdXZU6grgPOtFiajym",
+      "name": "asims",
+      "surname": "cnrejj",
+      "id": 3
+    }
+  ]
+}
