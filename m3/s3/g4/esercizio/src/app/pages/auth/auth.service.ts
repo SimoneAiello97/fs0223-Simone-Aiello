@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router} from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, map, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, tap, throwError } from 'rxjs';
 import { ILoginData } from 'src/app/Moduli/i-login-data';
 import { Iauthdata } from 'src/app/Moduli/iauthdata';
 import { ISignUpData } from 'src/app/Moduli/isign-up-data';
@@ -27,21 +27,39 @@ export class AuthService {
 
   constructor(
     private http:HttpClient,
-    private router: Router) { }
+    private router: Router) { this.restoreUser() }
 
 
     signUp(data:ISignUpData){
-      return this.http.post<Iauthdata>(this.registerUrl, data)
+      /* return this.http.post<IAuthData>(this.registerUrl,data) */
+      return this.http.post<Iauthdata>(this.registerUrl, data).pipe(
+        catchError(error => {
+          if (error.status === 400) {
+            // Gestisci l'errore "Bad Request" qui
+            // Puoi loggare l'errore, mostrare un messaggio all'utente, ecc.
+            alert('QUI POSSO FARE QUALCOSA CON L ERRORE');
+          }
+          return throwError(error); // Rilancia l'errore per ulteriori gestioni
+        })
+      );
     }
 
     signIn(data:ILoginData){
-      return this.http.post<Iauthdata>(this.loginUrl, data)
-      .pipe(tap(data => {
-        this.authSubject.next(data)
-        localStorage.setItem('user', JSON.stringify(data))
+      return this.http.post<Iauthdata>(this.loginUrl,data)
+      .pipe(tap(data =>{
+        this.authSubject.next(data);
+        localStorage.setItem('user', JSON.stringify(data));
 
-        const expDate =this.jwtHlper.getTokenExpirationDate(data.accessToken) as Date
-         this.autoLogout(expDate)
+        const expDate = this.jwtHlper.getTokenExpirationDate(data.accessToken) as Date;
+        this.autoLogout(expDate);
+      }))
+      .pipe(catchError(error => {
+        if (error.status === 400) {
+          // Gestisci l'errore "Bad Request" qui
+          // Puoi loggare l'errore, mostrare un messaggio all'utente, ecc.
+          alert('QUI POSSO FARE QUALCOSA CON L ERRORE');
+        }
+        return throwError(error); // Rilancia l'errore per ulteriori gestioni
       }))
     }
 
