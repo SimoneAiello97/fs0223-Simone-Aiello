@@ -15,7 +15,7 @@ import { environment } from 'src/environments/environment.development';
 export class AuthService {
 
   jwtHlper:JwtHelperService = new JwtHelperService()
-  apiUrl:string = environment.urlUser
+  apiUrl:string = environment.url
   SignUpUrl:string = this.apiUrl + '/register';
   SignInUrl:string = this.apiUrl + '/login'
 
@@ -38,12 +38,11 @@ export class AuthService {
     );
   }
 
-  signIn(data:ISignIn){
+   signIn(data:ISignIn){
     return this.http.post<IAuthData>(this.SignInUrl, data)
     .pipe(tap(data =>{
       this.authSubject.next(data);
       localStorage.setItem('user', JSON.stringify(data));
-
       const expDate = this.jwtHlper.getTokenExpirationDate(data.accessToken) as Date;
       this.autoLogout(expDate);
     }))
@@ -54,6 +53,8 @@ export class AuthService {
       return throwError(error);
     }))
   }
+
+
 
   logout(){
     this.authSubject.next(null);

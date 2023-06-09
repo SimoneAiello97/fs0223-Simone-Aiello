@@ -1,4 +1,6 @@
+
 import { Component } from '@angular/core';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  constructor (private homeSvc: HomeService){}
 
+ngOnInit(){
+  this.homeSvc.getAllPosts().subscribe(data =>console.log(data))
+}
 }

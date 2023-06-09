@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
+import { EditTodoComponent } from './edit-todo/edit-todo.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    AddTodoComponent,
+    EditTodoComponent
   ],
   imports: [
     CommonModule,

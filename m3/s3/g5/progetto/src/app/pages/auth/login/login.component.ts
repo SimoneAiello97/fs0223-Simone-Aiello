@@ -21,7 +21,7 @@ constructor(private authSvc:AuthService,private router: Router){}
 login(){
   this.authSvc.signIn(this.data)
   .subscribe(data => {
-    console.log('sei loggato')
+    console.log('sei loggato', data)
     this.router.navigate(['/'])
   })
 }

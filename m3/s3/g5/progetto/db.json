@@ -1,39 +1,11 @@
 {
   "users": [
     {
-      "email": "epicode@school.it",
-      "password": "$2a$10$ysBi20p5sDMQ2wdG0BmQgOT4a/Vj74B68R42Wm/wkywB3BEjhOCGq",
-      "name": "epicode",
-      "surname": "school",
-      "id": 1
-    },
-    {
-      "email": "abcde@gmail.com",
-      "password": "$2a$10$52y1uLNRYimVzafJkQz5V.soCdy2Pp6qZ6Wue9q7Bv.xNzRGTCuKe",
-      "name": "aaa",
-      "surname": "saasas",
-      "id": 2
-    },
-    {
-      "email": "ciao@gmail.com",
-      "password": "$2a$10$/bmFdBqq.W4d2MTXeN5WkuvOs3nlI14m/RICSLlKw.ybtfo/LTjtG",
-      "name": "crer",
-      "surname": "crec",
-      "id": 3
-    },
-    {
-      "email": "dewd@gmail.com",
-      "password": "$2a$10$rO8FLP5hpUOlXUs8rlMFWuFragPMT.mhOs4c3hGBcWemiTtjVxO46",
-      "name": "crewjn",
-      "surname": "crec",
-      "id": 4
-    },
-    {
-      "email": "simone@aiello.it",
-      "password": "$2a$10$hTvdxMxKMAHOJcHoGE3pJeZj4Zy.AoQxOm5MtaF1cPF03IP8QzLOq",
+      "email": "simone@gmail.it",
+      "password": "$2a$10$ekE1BJdkphtG8mru4q/BLOQ2JHqxMTLGgJN4HRADsuYIKKmbT8JaC",
       "name": "simone",
       "surname": "simone",
-      "id": 5
+      "id": 1
     }
   ],
   "todos": []
