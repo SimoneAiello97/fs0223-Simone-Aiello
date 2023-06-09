@@ -1,13 +1,13 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject, catchError, map, tap, throwError } from 'rxjs';
-import { ILoginData } from 'src/app/Moduli/i-login-data';
-import { Iauthdata } from 'src/app/Moduli/iauthdata';
-import { ISignUpData } from 'src/app/Moduli/isign-up-data';
+import { IAuthData } from 'src/app/interfaces/iauth-data';
+import { ISignIn } from 'src/app/interfaces/isign-in';
+import { ISignUp } from 'src/app/interfaces/isign-up';
 import { environment } from 'src/environments/environment.development';
-
 
 @Injectable({
   providedIn: 'root'
@@ -15,78 +15,69 @@ import { environment } from 'src/environments/environment.development';
 export class AuthService {
 
   jwtHlper:JwtHelperService = new JwtHelperService()
-  apiUrl:string = environment.url
-  registerUrl:string = this.apiUrl + '/register';
-  loginUrl:string = this.apiUrl + '/login';
-  userUrl:string = this.apiUrl + '/users';
+  apiUrl:string = environment.urlUser
+  SignUpUrl:string = this.apiUrl + '/register';
+  SignInUrl:string = this.apiUrl + '/login'
 
 
-  private authSubject = new BehaviorSubject<null | Iauthdata>(null)
+  private authSubject = new BehaviorSubject<null | IAuthData>(null)
   user$ = this.authSubject.asObservable();
   isLoggedIn$ = this.user$.pipe(map(user => Boolean(user)));
 
-  constructor(
-    private http:HttpClient,
-    private router: Router) { this.restoreUser() }
+  constructor(private http:HttpClient, private router: Router) { this.restoreUser()}
 
+  signUp(data:ISignUp){
 
-    signUp(data:ISignUpData){
-      /* return this.http.post<IAuthData>(this.registerUrl,data) */
-      return this.http.post<Iauthdata>(this.registerUrl, data).pipe(
-        catchError(error => {
-          if (error.status === 400) {
-            // Gestisci l'errore "Bad Request" qui
-            // Puoi loggare l'errore, mostrare un messaggio all'utente, ecc.
-            alert('QUI POSSO FARE QUALCOSA CON L ERRORE');
-          }
-          return throwError(error); // Rilancia l'errore per ulteriori gestioni
-        })
-      );
-    }
-
-    signIn(data:ILoginData){
-      return this.http.post<Iauthdata>(this.loginUrl,data)
-      .pipe(tap(data =>{
-        this.authSubject.next(data);
-        localStorage.setItem('user', JSON.stringify(data));
-
-        const expDate = this.jwtHlper.getTokenExpirationDate(data.accessToken) as Date;
-        this.autoLogout(expDate);
-      }))
-      .pipe(catchError(error => {
+    return this.http.post<IAuthData>(this.SignUpUrl, data).pipe(
+      catchError(error => { // ho provato a inserire una gestione degli errori, cercando su internet (c'é tanto ChatGpt qui)
         if (error.status === 400) {
-          // Gestisci l'errore "Bad Request" qui
-          // Puoi loggare l'errore, mostrare un messaggio all'utente, ecc.
-          alert('QUI POSSO FARE QUALCOSA CON L ERRORE');
+          alert('Non ti sei registrato correttamente');
         }
-        return throwError(error); // Rilancia l'errore per ulteriori gestioni
-      }))
-    }
+        return throwError(error);
+      })
+    );
+  }
 
-    restoreUser(){
-      const userJson = localStorage.getItem('user');
-      if(!userJson){
-        return
+  signIn(data:ISignIn){
+    return this.http.post<IAuthData>(this.SignInUrl, data)
+    .pipe(tap(data =>{
+      this.authSubject.next(data);
+      localStorage.setItem('user', JSON.stringify(data));
+
+      const expDate = this.jwtHlper.getTokenExpirationDate(data.accessToken) as Date;
+      this.autoLogout(expDate);
+    }))
+    .pipe(catchError(error => {
+      if (error.status === 400) {
+        alert('I dati inseriti non sono corretti');
       }
-      const user:Iauthdata = JSON.parse(userJson);
-      if(this.jwtHlper.isTokenExpired(user.accessToken)){
-        return
-      }
-      this.authSubject.next(user)
-      console.log('Sei attualmente loggato');
+      return throwError(error);
+    }))
+  }
 
+  logout(){
+    this.authSubject.next(null);
+    localStorage.removeItem('user')
+    this.router.navigate(['/login']);
+  }
+  autoLogTimer:any
+
+  autoLogout(expDate:Date){
+    const expMs:number = expDate.getTime() - new Date().getTime();
+
+    this.autoLogTimer = setTimeout(() => {this.logout()}, expMs);
+  }
+
+  restoreUser(){
+    const userJson = localStorage.getItem('user');
+    if(!userJson){
+      return
     }
-
-    logout(){
-      this.authSubject.next(null);
-      localStorage.removeItem('user')
-      this.router.navigate(['/login']);
+    const user:IAuthData = JSON.parse(userJson);
+    if(this.jwtHlper.isTokenExpired(user.accessToken)){
+      return
     }
-    autoLogTimer:any
-
-    autoLogout(expDate:Date){
-      const expMs:number = expDate.getTime() - new Date().getTime();
-
-      this.autoLogTimer = setTimeout(() => {this.logout()}, expMs);
-    }
+    this.authSubject.next(user)
+    console.log('Sei attualmente loggato');
+  }
 }

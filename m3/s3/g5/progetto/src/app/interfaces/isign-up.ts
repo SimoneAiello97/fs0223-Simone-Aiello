@@ -1,5 +1,5 @@
-export interface ISignUpData {
-  email:string;
+export interface ISignUp {
+  email: string;
   password:string;
   name:string;
   surname:string;

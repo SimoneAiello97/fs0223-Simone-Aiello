@@ -1,6 +1,8 @@
-import { AuthService } from './../auth.service';
 import { Component } from '@angular/core';
-import { ISignUpData } from 'src/app/Moduli/isign-up-data';
+import { FormControl, Validators } from '@angular/forms';
+import { ISignUp } from 'src/app/interfaces/isign-up';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,20 +10,29 @@ import { ISignUpData } from 'src/app/Moduli/isign-up-data';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-
-  data: ISignUpData = {
+  email = new FormControl('', [Validators.required, Validators.email]);
+  data: ISignUp = {
     email: '',
     password: '',
     name: '',
     surname: ''
   }
 
-    constructor(private authSvc:AuthService){}
+    constructor(private authSvc:AuthService, private router:Router){}
 
     register(){
       this.authSvc.signUp(this.data)
-      .subscribe(res => console.log('il dato del form', res))
+      .subscribe(res =>
+
+      this.router.navigate(['./auth/login'])
+        )
     }
 
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
 
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
 }

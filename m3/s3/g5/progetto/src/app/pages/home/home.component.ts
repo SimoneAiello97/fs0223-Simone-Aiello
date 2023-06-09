@@ -1,4 +1,3 @@
-import { AuthService } from './../auth/auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-constructor(private authSvc:AuthService){}
 
 }

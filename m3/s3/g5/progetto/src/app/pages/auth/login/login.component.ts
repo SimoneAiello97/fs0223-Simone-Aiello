@@ -1,7 +1,7 @@
-import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { ILoginData } from 'src/app/Moduli/i-login-data';
 import { AuthService } from '../auth.service';
+import { ISignIn } from 'src/app/interfaces/isign-in';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  data:ILoginData = {
+  data:ISignIn = {
     email: '',
     password: ''
   }
