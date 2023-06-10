@@ -2,3 +2,21 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Stile del thumb (il "manico" della scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #fa9220;
+  border-radius: 5px;
+}
+
+/* Stile della traccia (l'area di sfondo della scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: none !important; /* Colore della traccia */
+}

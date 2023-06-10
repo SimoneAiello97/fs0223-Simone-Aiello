@@ -3,19 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { AddTodoComponent } from './add-todo/add-todo.component';
-import { EditTodoComponent } from './edit-todo/edit-todo.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    AddTodoComponent,
-    EditTodoComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

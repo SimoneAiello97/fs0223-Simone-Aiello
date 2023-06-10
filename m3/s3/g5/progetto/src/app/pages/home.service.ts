@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { ITodo } from '../interfaces/i-todo';
+import { IPizza } from '../interfaces/ipizza';
 
 @Injectable({
   providedIn: 'root'
@@ -12,23 +12,24 @@ export class HomeService {
 
   constructor(private http:HttpClient) { }
 
-  getAllPosts(){
-    return this.http.get<ITodo[]>(this.apiUrl)
+  getAll(){
+    return this.http.get<IPizza[]>(this.apiUrl);
   }
 
-  getSinglePost(id:number){
-    return this.http.get(this.apiUrl + '/' + id);
+  getById(id:number){
+    return this.http.get<IPizza>(`${this.apiUrl}/${id}`);
   }
 
-  addPost(post:ITodo){
-    return this.http.post(this.apiUrl, post);
+  post(data:Partial<IPizza>){
+    return this.http.post<IPizza>(`${this.apiUrl}`,data);
   }
 
-  editPost(post:ITodo){
-    return this.http.put(this.apiUrl + '/' + post.id, post);
+  put(data:Partial<IPizza>){
+    return this.http.put<IPizza>(`${this.apiUrl}/${data.id}`,data);
   }
 
-  deletePost(id:number = 0){
-    return this.http.delete(this.apiUrl + '/' + id);
+  delete(id:number){
+    return this.http.delete<IPizza>(`${this.apiUrl}/${id}`);
   }
+
 }

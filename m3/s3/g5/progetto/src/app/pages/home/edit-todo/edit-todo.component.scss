@@ -1,0 +1,21 @@
+.main{
+  height: 100%;
+  width: 100%;
+  background-image: url('../../../../assets/pizza-bg-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+
+  .container-fluid{
+    height: 100%;
+    backdrop-filter: blur(8px);
+  }
+  h1{
+    color: #c37418;
+    font-size: 100px;
+    span{
+      color: rgb(255, 208, 0);
+    }
+  }
+}

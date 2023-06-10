@@ -1,0 +1,23 @@
+.main{
+  height: 100%;
+  width: 100%;
+  background-color: #26373d;
+
+}
+.container-fluid{
+  background-image: url('../../../assets/Pizzaiolo-Michele.png');
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.title{
+  color: red;
+  font-size: 50px;
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: bolder;
+  span{
+    color: rgb(255, 174, 0);
+  }
+}

@@ -1,1 +1,30 @@
-<p>edit-todo works!</p>
+<div class="main">
+  <div class="container-fluid d-flex align-items-center flex-column justify-content-around">
+<h1>
+  Non ti piace? <span>Cambiala!</span>
+</h1>
+<h2 class="text-white">l'importante è che non sia una mimosa</h2>
+    <form>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-success fs-4">Gusto</label>
+        <input type="text" class="form-control" name="gusto" placeholder="Nome della Tua pizza" [(ngModel)]="pizza.gusto">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-white fs-4">Ingredienti</label>
+        <input type="text" class="form-control" name="ingredients" placeholder="Inserisci gli ingredienti" [(ngModel)]="pizza.ingredients">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-danger fs-4">Prezzo</label>
+        <input type="number" class="form-control" name="prezzo" placeholder="Inserisci il prezzo" [(ngModel)]="pizza.prezzo">
+      </div>
+
+      <button class="btn btn-outline-light" (click)="edit()">Modifica</button>
+
+    </form>
+    <button class=" d-flex align-items-center text-white btn btn-link"[routerLink]="['/']">Indietro</button>
+  </div>
+</div>
+

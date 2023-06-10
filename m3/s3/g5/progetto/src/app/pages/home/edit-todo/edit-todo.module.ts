@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { EditTodoRoutingModule } from './edit-todo-routing.module';
 import { EditTodoComponent } from './edit-todo.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { EditTodoComponent } from './edit-todo.component';
   ],
   imports: [
     CommonModule,
-    EditTodoRoutingModule
+    EditTodoRoutingModule,
+    FormsModule
   ]
 })
 export class EditTodoModule { }

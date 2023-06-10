@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('', [Validators.required, Validators.minLength(5)]);
   data: ISignUp = {
     email: '',
     password: '',

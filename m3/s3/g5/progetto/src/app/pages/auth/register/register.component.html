@@ -1,20 +1,41 @@
+<div class="main">
+  <div class="container-fluid d-flex align-items-center flex-column justify-content-center">
 <form>
 
-  <input class="form-control" type="email" placeholder="email"
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label text-white">Email</label>
+    <input class="form-control" type="email" placeholder="Inserisci la tua email"
   name="email" [(ngModel)]="data.email">
+  </div>
 
-  <input class="form-control" type="password" placeholder="password"
-  name="password" [(ngModel)]="data.password">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label text-white">Password <span>(Deve contenere almeno 5 caratteri)</span></label>
+    <input class="form-control" type="password" placeholder="Inserisci la tua password"
+    name="password" [(ngModel)]="data.password">
+  </div>
 
-  <input class="form-control" type="text" placeholder="Name"
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label text-white">Nome</label>
+  <input class="form-control" type="text" placeholder="Il tuo Nome"
   name="name" [(ngModel)]="data.name">
+  </div>
 
-  <input class="form-control" type="text" placeholder="surname"
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label text-white">Cognome</label>
+ <input class="form-control" type="text" placeholder="Il tuo Cognome"
   name="surname" [(ngModel)]="data.surname">
+  </div>
 
   <button
   (click)="register()"
-  class="btn btn-primary"
+  class="btn btn-danger"
   >Registrati</button>
 
 </form>
+
+
+<button type="button" class="btn btn-link text-white mt-5" [routerLink]="['/']">Back</button>
+
+</div>
+</div>
+

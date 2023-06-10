@@ -1,1 +1,28 @@
-<p>add-todo works!</p>
+<div class="main">
+  <div class="container-fluid d-flex align-items-center flex-column justify-content-around">
+<h1>
+  Crea la tua pizza
+</h1>
+    <form>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-success fs-4">Gusto</label>
+        <input type="text" class="form-control" name="gusto" placeholder="Nome della Tua pizza" [(ngModel)]="newPizza.gusto">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-white fs-4">Ingredienti</label>
+        <input type="text" class="form-control" name="ingredients" placeholder="Inserisci gli ingredienti" [(ngModel)]="newPizza.ingredients">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-danger fs-4">Prezzo</label>
+        <input type="number" class="form-control" name="prezzo" placeholder="Inserisci il prezzo" [(ngModel)]="newPizza.prezzo">
+      </div>
+
+      <button class="btn btn-outline-dark" (click)="create()">Aggiungi pizza</button>
+
+    </form>
+    <button class=" d-flex align-items-center text-dark btn btn-link"[routerLink]="['/']">Indietro</button>
+  </div>
+</div>
