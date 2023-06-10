@@ -13,19 +13,33 @@
       "name": "simone",
       "surname": "simone",
       "id": 2
+    },
+    {
+      "email": "elisabeth271099@gmail.com",
+      "password": "$2a$10$s4jZq7bJjdFCz5N9c6IfFuQkUOxOigr3NNNp7.YwNStHi6p/7joYe",
+      "name": "goffredo",
+      "surname": "non lo so ",
+      "id": 3
     }
   ],
   "todos": [
     {
-      "gusto": "Margherita",
-      "prezzo": 2,
-      "id": 1,
-      "ingredients": "pomodoro, mozzarella"
+      "gusto": "LaMiguel",
+      "ingredients": "formaggio (ovviamente)",
+      "id": 2,
+      "prezzo": 20
     },
     {
-      "gusto": "Mimosa",
-      "prezzo": 29,
-      "id": 2
+      "gusto": "Elisa",
+      "ingredients": "meravigghia",
+      "prezzo": 45,
+      "id": 3
+    },
+    {
+      "gusto": "berni",
+      "ingredients": "Penny",
+      "prezzo": 60,
+      "id": 4
     }
   ]
 }

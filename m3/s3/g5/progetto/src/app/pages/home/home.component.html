@@ -30,19 +30,23 @@
 <div class="row">
   <h1 class="fs-1 text-center my-5">Benvenuto nel mondo delle pizze!</h1>
 </div>
-    <div class="row">
-      <div class="col">
+    <div class="row ">
+      <div class="col d-flex justify-content-center flex-column align-items-center">
         <div class="card mb-2" *ngFor="let pizza of pizze">
           <div class="card-body">
             <h3 class="card-title fs-2">{{pizza.gusto}}</h3>
             <h6 class="card-subtitle mb-2 text-body-secondary fs-5">{{pizza.prezzo}} €</h6>
             <p class="card-text fs-6">{{pizza.ingredients}}</p>
-            <button class="btn btn-warning" [routerLink]="['/home','edit',pizza.id]">Modifica</button>
-            <button class="btn btn-danger" (click)="delete(pizza.id)">Delete</button>
+            <button class="btn btn-warning " [routerLink]="['/home','edit',pizza.id]">Modifica</button>
+            <div class="x-button" (click)="delete(pizza.id)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </div>
           </div>
         </div>
+        <button routerLink="add" class="addBtn fixed-bottom">Aggiungi Pizza</button>
       </div>
-      <button routerLink="add" class="btn btn-success fixed-bottom mb-4">Aggiungi Pizza</button>
     </div>
   </div>
 </div>
