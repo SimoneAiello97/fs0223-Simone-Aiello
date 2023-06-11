@@ -1,9 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 
+
+*{
+  font-family: 'Yomogi', cursive !important;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
   width:100%;
-overflow-x:hidden}
+overflow-x:hidden;
+background-color: #fedfa9;}
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

@@ -29,9 +29,9 @@ export class AuthService {
   signUp(data:ISignUp){
 
     return this.http.post<IAuthData>(this.SignUpUrl, data).pipe(
-      catchError(error => { // ho provato a inserire una gestione degli errori, cercando su internet (c'é tanto ChatGpt qui)
+      catchError(error => {
         if (error.status === 400) {
-          alert('Non ti sei registrato correttamente');
+           this.router.navigate(['auth/error']);
         }
         return throwError(error);
       })

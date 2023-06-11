@@ -24,22 +24,40 @@
   ],
   "todos": [
     {
-      "gusto": "LaMiguel",
-      "ingredients": "formaggio (ovviamente)",
+      "gusto": "Margherita",
+      "ingredients": "Pomodoro, mozzarella, basilico",
       "id": 2,
-      "prezzo": 20
+      "prezzo": 8
     },
     {
-      "gusto": "Elisa",
-      "ingredients": "meravigghia",
-      "prezzo": 45,
+      "gusto": "Capricciosa",
+      "ingredients": "Pomodoro, mozzarella, prosciutto cotto, carciofi, olive, funghi",
+      "prezzo": 10,
       "id": 3
     },
     {
-      "gusto": "berni",
-      "ingredients": "Penny",
-      "prezzo": 60,
+      "gusto": "Quattro Stagioni",
+      "ingredients": "Pomodoro, mozzarella, prosciutto cotto, funghi, carciofi, olive",
+      "prezzo": 12,
       "id": 4
+    },
+    {
+      "gusto": "Diavola",
+      "ingredients": "Pomodoro, mozzarella, salame piccante, peperoncino",
+      "prezzo": 10,
+      "id": 5
+    },
+    {
+      "gusto": "Mediterranea",
+      "ingredients": " Pomodoro, mozzarella, olive nere, capperi, acciughe, origano, basilico, olio d'oliva",
+      "prezzo": 12,
+      "id": 6
+    },
+    {
+      "gusto": "Gourmet",
+      "ingredients": "Pomodoro San Marzano, mozzarella di bufala, prosciutto crudo, rucola, scaglie di Parmigiano Reggiano, olio di tartufo bianco",
+      "prezzo": 20,
+      "id": 7
     }
   ]
 }
