@@ -9,13 +9,16 @@
 .main{
   height: 100%;
   width: 100%;
-  background-image: url('../../../assets/bg.jpg');
+  /* background-image: url('../../../assets/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center; */
+  background-color: #fedfa9;
+  width: 100;
+  overflow: hidden;
 
 h1{
-  color: #157347;
+  color: #dd8126;
   font-size: 100px !important;
 }
 .card{
@@ -26,6 +29,7 @@ h1{
   position: relative;
   width: 500px;
   margin: auto;
+  z-index: 3;
   &:hover{
     cursor: pointer;
     box-shadow: 0 0 0 4px rgba(black, 0.0688);
