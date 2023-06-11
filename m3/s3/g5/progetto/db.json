@@ -32,7 +32,7 @@
     {
       "gusto": "Capricciosa",
       "ingredients": "Pomodoro, mozzarella, prosciutto cotto, carciofi, olive, funghi",
-      "prezzo": 10,
+      "prezzo": 9,
       "id": 3
     },
     {
@@ -58,6 +58,11 @@
       "ingredients": "Pomodoro San Marzano, mozzarella di bufala, prosciutto crudo, rucola, scaglie di Parmigiano Reggiano, olio di tartufo bianco",
       "prezzo": 20,
       "id": 7
+    },
+    {
+      "gusto": "Focaccia Semplice",
+      "prezzo": 4,
+      "id": 8
     }
   ]
 }
