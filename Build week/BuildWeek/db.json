@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "simone@simone.it",
+      "password": "$2a$10$82x.w2Z3ZEgqFD3P9k2l8OARL2Ds1ayMH8ExhItwkB7LEuNKmhh3q",
+      "name": "simone",
+      "surname": "simone",
+      "id": 1
+    },
+    {
+      "email": "mari@mari.it",
+      "password": "$2a$10$hAt2QBOAv30Cv46TiGVCGuO5jUld0gDDgNC3FWXzsuU1wJ3zi5sja",
+      "name": "mari",
+      "surname": "mari",
+      "id": 2
+    }
+  ],
+  "accomodations": []
+}
