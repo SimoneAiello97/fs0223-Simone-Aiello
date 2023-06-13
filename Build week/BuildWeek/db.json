@@ -15,5 +15,12 @@
       "id": 2
     }
   ],
-  "accomodations": []
+  "accomodations": [
+    {
+      "id": 2,
+      "title": "casa di mari",
+      "prezzo": 1,
+      "description": "la casa di mari é bella, forse!!!!"
+    }
+  ]
 }

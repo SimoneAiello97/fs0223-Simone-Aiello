@@ -32,7 +32,7 @@ export class AuthService {
   isLoggedIn$ = this.user$.pipe(map(user => !!user));
 
   /* nel costruttore mi serviranno httpclient per le chiamate al server e il router per rindirizzare le pagine */
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router) { this.restoreUser() }
 
   /* Questo metodo passa un utente e fa una chiamata che restituisce un accessToken, e lo so grazie alla documentazione */
   register(utenteregistrato:IRegister){
@@ -76,7 +76,6 @@ restoreUser(){
   if(this.jwtHelper.isTokenExpired(userParsato.accessToken)){
     return
   }
-
   this.authSubject.next(userParsato)
 
 }

@@ -1,1 +1,14 @@
-<p>home works!</p>
+<h1>titolo</h1>
+<button [routerLink]="['add']">Aggiungi</button>
+<!-- ciclo il mio array che mi sono istanziato all'inizio -->
+<div *ngFor="let appartament of appartaments" class="boh">
+
+<p>{{appartament.title}}</p>
+<p>{{appartament.prezzo}}</p>
+<p>{{appartament.description}}</p>
+
+<button [routerLink]="['singleAccomodation',appartament.id]">guarda</button>
+<button [routerLink]="['edit',appartament.id]">modifica</button>
+<!-- andró a crearmi un bottone che richiama la delete -->
+<button (click)="delete(appartament.id)">Cancella</button>
+</div>

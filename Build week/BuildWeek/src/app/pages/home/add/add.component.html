@@ -1,1 +1,21 @@
-<p>add works!</p>
+<form>
+
+  <div >
+
+    <input type="text" class="form-control" name="gusto" placeholder="Nome appartamento" [(ngModel)]="newAppartament.title">
+  </div>
+
+  <div >
+
+    <input type="text" class="form-control" name="ingredients" placeholder="Inserisci la descrizione" [(ngModel)]="newAppartament.description">
+  </div>
+
+  <div >
+
+    <input type="number" class="form-control" name="prezzo" placeholder="Inserisci il prezzo" [(ngModel)]="newAppartament.prezzo">
+  </div>
+
+  <button (click)="create()">Aggiungi appartamento</button>
+
+</form>
+<button [routerLink]="['/']">Indietro</button>

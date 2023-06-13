@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
 
   /* i validators sono un componente di angular che mi permette di definire le mie validazioni */
-  email = new FormControl ('',[Validators.required, Validators.email])
+email = new FormControl ('',[Validators.required, Validators.email])
 password = new FormControl ('',[Validators.required, Validators.minLength(3)])
 
 data: IRegister = {
